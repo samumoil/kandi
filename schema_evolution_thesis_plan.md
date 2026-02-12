@@ -1,9 +1,30 @@
+# Tutkimuskysymys
+
+```
+Miten skeemaevoluution vaikutuksia voi minimoida tai hallita?
+(Kuinka yleinen ongelma skeemaevoluutio on?)
+```
+
+# Runko
+
+0. Tiivistelmä
+1. Johdanto
+	- Data warehouse <> data lake, erot, NoSQL
+2. Mitä on skeemaevoluutio?
+	- Syyt
+	- Mitä se ihan oikeasti on?
+	- Pitääkö ottaa kantaa tietokantojen kehitykseen ja Big Data nousuun?
+3. Ratkaisumallit/vaihtoehdot
+4. <jotain vielä>
+5. Pohdinta
+
 # Query
 
 ##SCOPUS
+```
 ( "schema evolution" ) OR ( "schema drift" ) AND ( LIMIT-TO ( SUBJAREA , "COMP" ) ) AND ( LIMIT-TO ( EXACTKEYWORD , "Etl" ) OR LIMIT-TO ( EXACTKEYWORD , "Extract Transform Loads" ) )
 -> 16 results
-
+```
 
 
 # Lähteet ja lainaukset
