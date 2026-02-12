@@ -1,4 +1,6 @@
-# SCOPUS
+# Query
+
+##SCOPUS
 ( "schema evolution" ) OR ( "schema drift" ) AND ( LIMIT-TO ( SUBJAREA , "COMP" ) ) AND ( LIMIT-TO ( EXACTKEYWORD , "Etl" ) OR LIMIT-TO ( EXACTKEYWORD , "Extract Transform Loads" ) )
 -> 16 results
 
@@ -102,14 +104,35 @@ SOURCE: Scopus
 
 
 
-# The Piazza peer data management system
-A. Y. Halevy, Z. G. Ives, Jayant Madhavan, P. Mork, D. Suciu and I. Tatarinov, "The Piazza peer data management system," in IEEE Transactions on Knowledge and Data Engineering, vol. 16, no. 7, pp. 787-798, July 2004, doi: 10.1109/TKDE.2004.1318562.
-keywords: {Semantic Web;XML;Mediation;Large-scale systems;Resource description framework;Database languages;Investments;Memory;Standardization;Terminology},
-
 # Evolution management in multi-model databases
 I. Holubová, M. Vavrek, and S. Scherzinger, “Evolution manage-
 ment in multi-model databases,” Data Knowl. Eng., vol. 136, 2021,
 Art. no. 101932.
+
+
+# Self-Adapting Design and Maintenance of Multi-Model Databases
+Irena Holubova, Pavel Koupil, and Jiaheng Lu. 2022. Self-Adapting Design and Maintenance of Multi-Model Databases. In Proceedings of the 26th International Database Engineered Applications Symposium (IDEAS '22). Association for Computing Machinery, New York, NY, USA, 9–15. https://doi-org.ezproxy.uef.fi:2443/10.1145/3548785.3548810
+
+# The Snowflake Elastic Data Warehouse. 
+Benoit Dageville, Thierry Cruanes, Marcin Zukowski, Vadim Antonov, Artin Avanes, Jon Bock, Jonathan Claybaugh, Daniel Engovatov, Martin Hentschel, Jiansheng Huang, Allison W. Lee, Ashish Motivala, Abdul Q. Munir, Steven Pelley, Peter Povinec, Greg Rahn, Spyridon Triantafyllis, and Philipp Unterbrunner. 2016. The Snowflake Elastic Data Warehouse. In Proceedings of the 2016 International Conference on Management of Data (SIGMOD '16). Association for Computing Machinery, New York, NY, USA, 215–226. https://doi-org.ezproxy.uef.fi:2443/10.1145/2882903.2903741
+
+# Graceful database schema evolution: the PRISM workbench
+Carlo A. Curino, Hyun J. Moon, and Carlo Zaniolo. 2008. Graceful database schema evolution: the PRISM workbench. Proc. VLDB Endow. 1, 1 (August 2008), 761–772. https://doi-org.ezproxy.uef.fi:2443/10.14778/1453856.1453939
+
+# Synchronization of Queries and Views Upon Schema Evolutions: A Survey. 
+Loredana Caruccio, Giuseppe Polese, and Genoveffa Tortora. 2016. Synchronization of Queries and Views Upon Schema Evolutions: A Survey. ACM Trans. Database Syst. 41, 2, Article 9 (June 2016), 41 pages. https://doi-org.ezproxy.uef.fi:2443/10.1145/2903726
+
+# CODS: evolving data efficiently and scalably in column oriented databases. 
+Ziyang Liu, Sivaramakrishnan Natarajan, Bin He, Hui-I Hsiao, and Yi Chen. 2010. CODS: evolving data efficiently and scalably in column oriented databases. Proc. VLDB Endow. 3, 1–2 (September 2010), 1521–1524. https://doi-org.ezproxy.uef.fi:2443/10.14778/1920841.1921028
+
+
+# Schema management for document stores
+Schema management for document stores
+Author PictureLanjun Wang, Author PictureShuo Zhang, Author PictureJuwei Shi, Author PictureLimei Jiao, Author PictureOktie Hassanzadeh, + 2
+Proceedings of the VLDB Endowment (PVLDB), Volume 8, Issue 9Pages 922–933https://doi-org.ezproxy.uef.fi:2443/10.14778/2777598.2777601
+
+# Data lake management: challenges and opportunities
+Fatemeh Nargesian, Erkang Zhu, Renée J. Miller, Ken Q. Pu, and Patricia C. Arocena. 2019. Data lake management: challenges and opportunities. Proc. VLDB Endow. 12, 12 (August 2019), 1986–1989. https://doi-org.ezproxy.uef.fi:2443/10.14778/3352063.3352116
 
 # Inconsistency-Tolerant Integrity Checking
 H. Decker and D. Martinenghi, "Inconsistency-Tolerant Integrity Checking," in IEEE Transactions on Knowledge and Data Engineering, vol. 23, no. 2, pp. 218-234, Feb. 2011, doi: 10.1109/TKDE.2010.87.
@@ -303,11 +326,6 @@ method does not create an MD design from scratch, rather it
 can automatically absorb the new requirement and inte-
 grate it with the existing MD schema.
 
-
-
-
-
-
 # !!!!!!!!! The data warehouse lifecycle toolkit (2nd ed.)
 Kimball, R., & ProQuest. (2008). The data warehouse lifecycle toolkit (2nd ed.). Wiley Pub.,. http://ezproxy.uef.fi:2048/login?url=http://ebookcentral.proquest.com/lib/uef-ebooks/detail.action?docID=675005
 
@@ -315,7 +333,6 @@ Kimball, R., & ProQuest. (2008). The data warehouse lifecycle toolkit (2nd ed.).
 Vaisman A. A. and Zimányi E. Data Warehouse Systems - Design and Imple-
 mentation, Second Edition. Data-Centric Systems and Applications. Springer,
 2022.
-
 
 # Materialization and its metaclass implementation
 M. Dahchour, A. Pirotte and E. Zimanyi, "Materialization and its metaclass implementation," in IEEE Transactions on Knowledge and Data Engineering, vol. 14, no. 5, pp. 1078-1094, Sept.-Oct. 2002, doi: 10.1109/TKDE.2002.1033775.
@@ -350,9 +367,6 @@ firstly - because big data evolve much more frequently than
 traditional data sources, and secondly - because there are many
 more data models and formats to be handled while integrating
 data.
-
-
-
 
 # An ontological approach to handle multidimensional schema evolution for data warehouse
 M. Thenmozhi and K. Vivekanandan, “An ontological approach to handle multidimensional schema
