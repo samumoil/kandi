@@ -6,11 +6,12 @@
 
 
 
+# Lähteet ja lainaukset
 
+---
 
-# Repairing ETL Processes using Extended Relational Algebra
+## Repairing ETL Processes using Extended Relational Algebra
 Awiti, J., Wrembel, R. & Zimányi, E. (2025). Repairing ETL Processes using Extended Relational Algebra. Foundations of Computing and Decision Sciences, 50(2), 2025. 157-190. https://doi.org/10.2478/fcds-2025-0006
-
 
 ### !!! p157-158 - ETL prosessin kuvaus
 A data warehouse (DW) system architecture typically consists of: (1) a data source
@@ -69,23 +70,22 @@ none of the commercial or open-source ETL tools existing on the market supports
 this functionality.
 
 
+---
 
-
-# A study on the effect of a table’s involvement in foreign keys to its schema evolution
+## A study on the effect of a table’s involvement in foreign keys to its schema evolution
 Dimolikas K., Zarras A. V., and Vassiliadis P. A study on the effect of a table’s
 involvement in foreign keys to its schema evolution. In International Conference
 on Conceptual Modeling ER, volume 12400 of LNCS, pages 456–470. Springer,
 2020.
 
+---
 
-
-
-
-# From Tracking Lineage to Enhancing Data Quality and Auditing: Adding Provenance Support to Data Warehouses
+## From Tracking Lineage to Enhancing Data Quality and Auditing: Adding Provenance Support to Data Warehouses
 Vieira, M., de Oliveira, T., Cicco, L., de Oliveira, D. and Bedo, M. (2024). From Tracking Lineage to Enhancing Data Quality and Auditing: Adding Provenance Support to Data Warehouses with ProvETL. In Proceedings of the 26th International Conference on Enterprise Information Systems - Volume 1: ICEIS; ISBN 978-989-758-692-7; ISSN 2184-4992, SciTePress, pages 313-320. DOI: 10.5220/0012634500003690
 
+---
 
-# Using semantic web technologies to improve the extract transform load model
+## Using semantic web technologies to improve the extract transform load model
 Scopus
 EXPORT DATE: 11 February 2026
 
@@ -102,39 +102,45 @@ PUBLICATION STAGE: Final
 OPEN ACCESS: All Open Access; Gold Open Access
 SOURCE: Scopus
 
-
-
-# Evolution management in multi-model databases
+---
+## Evolution management in multi-model databases
 I. Holubová, M. Vavrek, and S. Scherzinger, “Evolution manage-
 ment in multi-model databases,” Data Knowl. Eng., vol. 136, 2021,
 Art. no. 101932.
 
-
-# Self-Adapting Design and Maintenance of Multi-Model Databases
+---
+## Self-Adapting Design and Maintenance of Multi-Model Databases
 Irena Holubova, Pavel Koupil, and Jiaheng Lu. 2022. Self-Adapting Design and Maintenance of Multi-Model Databases. In Proceedings of the 26th International Database Engineered Applications Symposium (IDEAS '22). Association for Computing Machinery, New York, NY, USA, 9–15. https://doi-org.ezproxy.uef.fi:2443/10.1145/3548785.3548810
 
-# The Snowflake Elastic Data Warehouse. 
+
+---
+## The Snowflake Elastic Data Warehouse. 
 Benoit Dageville, Thierry Cruanes, Marcin Zukowski, Vadim Antonov, Artin Avanes, Jon Bock, Jonathan Claybaugh, Daniel Engovatov, Martin Hentschel, Jiansheng Huang, Allison W. Lee, Ashish Motivala, Abdul Q. Munir, Steven Pelley, Peter Povinec, Greg Rahn, Spyridon Triantafyllis, and Philipp Unterbrunner. 2016. The Snowflake Elastic Data Warehouse. In Proceedings of the 2016 International Conference on Management of Data (SIGMOD '16). Association for Computing Machinery, New York, NY, USA, 215–226. https://doi-org.ezproxy.uef.fi:2443/10.1145/2882903.2903741
 
-# Graceful database schema evolution: the PRISM workbench
+---
+## Graceful database schema evolution: the PRISM workbench
 Carlo A. Curino, Hyun J. Moon, and Carlo Zaniolo. 2008. Graceful database schema evolution: the PRISM workbench. Proc. VLDB Endow. 1, 1 (August 2008), 761–772. https://doi-org.ezproxy.uef.fi:2443/10.14778/1453856.1453939
 
-# Synchronization of Queries and Views Upon Schema Evolutions: A Survey. 
+---
+## Synchronization of Queries and Views Upon Schema Evolutions: A Survey. 
 Loredana Caruccio, Giuseppe Polese, and Genoveffa Tortora. 2016. Synchronization of Queries and Views Upon Schema Evolutions: A Survey. ACM Trans. Database Syst. 41, 2, Article 9 (June 2016), 41 pages. https://doi-org.ezproxy.uef.fi:2443/10.1145/2903726
 
-# CODS: evolving data efficiently and scalably in column oriented databases. 
+---
+## CODS: evolving data efficiently and scalably in column oriented databases. 
 Ziyang Liu, Sivaramakrishnan Natarajan, Bin He, Hui-I Hsiao, and Yi Chen. 2010. CODS: evolving data efficiently and scalably in column oriented databases. Proc. VLDB Endow. 3, 1–2 (September 2010), 1521–1524. https://doi-org.ezproxy.uef.fi:2443/10.14778/1920841.1921028
 
-
-# Schema management for document stores
+---
+## Schema management for document stores
 Schema management for document stores
 Author PictureLanjun Wang, Author PictureShuo Zhang, Author PictureJuwei Shi, Author PictureLimei Jiao, Author PictureOktie Hassanzadeh, + 2
 Proceedings of the VLDB Endowment (PVLDB), Volume 8, Issue 9Pages 922–933https://doi-org.ezproxy.uef.fi:2443/10.14778/2777598.2777601
 
-# Data lake management: challenges and opportunities
+---
+## Data lake management: challenges and opportunities
 Fatemeh Nargesian, Erkang Zhu, Renée J. Miller, Ken Q. Pu, and Patricia C. Arocena. 2019. Data lake management: challenges and opportunities. Proc. VLDB Endow. 12, 12 (August 2019), 1986–1989. https://doi-org.ezproxy.uef.fi:2443/10.14778/3352063.3352116
 
-# Inconsistency-Tolerant Integrity Checking
+---
+## Inconsistency-Tolerant Integrity Checking
 H. Decker and D. Martinenghi, "Inconsistency-Tolerant Integrity Checking," in IEEE Transactions on Knowledge and Data Engineering, vol. 23, no. 2, pp. 218-234, Feb. 2011, doi: 10.1109/TKDE.2010.87.
 keywords: {Database systems;Data mining;Warehousing;Data quality;Transaction databases;Knowledge engineering;Integrity checking;inconsistency tolerance.},
 
@@ -179,8 +185,8 @@ can be used, no matter for how long the repair of violated
 cases is delayed.
 
 
-
-# A Generic Schema Evolution Approach for NoSQL and Relational Databases
+---
+## A Generic Schema Evolution Approach for NoSQL and Relational Databases
 A. H. Chillón, M. Klettke, D. S. Ruiz and J. G. Molina, "A Generic Schema Evolution Approach for NoSQL and Relational Databases," in IEEE Transactions on Knowledge and Data Engineering, vol. 36, no. 7, pp. 2774-2789, July 2024, doi: 10.1109/TKDE.2024.3362273.
 keywords: {Data models;Taxonomy;Codes;Databases;Engines;Aggregates;Relational databases;NoSQL databases;schema evolution;Evolution management;taxonomy of changes;schema change operations},
 
@@ -237,12 +243,13 @@ by Fernández Candel et al. [9]. An implementation of Athena
 and Orion are publicly available on a GitHub repository.9
 
 
-
-# Knowledge Graph-Enabled Cancer Data Analytics
+---
+## Knowledge Graph-Enabled Cancer Data Analytics
 S. M. S. Hasan, D. Rivera, X. -C. Wu, E. B. Durbin, J. B. Christian and G. Tourassi, "Knowledge Graph-Enabled Cancer Data Analytics," in IEEE Journal of Biomedical and Health Informatics, vol. 24, no. 7, pp. 1952-1967, July 2020, doi: 10.1109/JBHI.2020.2990797.
 keywords: {Cancer;Resource description framework;Tumors;Data models;Libraries;Data analysis;Data visualization;Knowledge graph;cancer registry;treatment},
 
-# A requirement-driven approach to the design and evolution of data warehouses,
+---
+## A requirement-driven approach to the design and evolution of data warehouses,
 Petar Jovanovic, Oscar Romero, Alkis Simitsis, Alberto Abelló, Daria Mayorova,
 A requirement-driven approach to the design and evolution of data warehouses,
 Information Systems,
@@ -326,19 +333,23 @@ method does not create an MD design from scratch, rather it
 can automatically absorb the new requirement and inte-
 grate it with the existing MD schema.
 
-# !!!!!!!!! The data warehouse lifecycle toolkit (2nd ed.)
+---
+## !!!!!!!!! The data warehouse lifecycle toolkit (2nd ed.)
 Kimball, R., & ProQuest. (2008). The data warehouse lifecycle toolkit (2nd ed.). Wiley Pub.,. http://ezproxy.uef.fi:2048/login?url=http://ebookcentral.proquest.com/lib/uef-ebooks/detail.action?docID=675005
 
-# !!!!!! Data Warehouse Systems - Design and Implementation, Second Edition
+---
+## !!!!!! Data Warehouse Systems - Design and Implementation, Second Edition
 Vaisman A. A. and Zimányi E. Data Warehouse Systems - Design and Imple-
 mentation, Second Edition. Data-Centric Systems and Applications. Springer,
 2022.
 
-# Materialization and its metaclass implementation
+---
+## Materialization and its metaclass implementation
 M. Dahchour, A. Pirotte and E. Zimanyi, "Materialization and its metaclass implementation," in IEEE Transactions on Knowledge and Data Engineering, vol. 14, no. 5, pp. 1078-1094, Sept.-Oct. 2002, doi: 10.1109/TKDE.2002.1033775.
 keywords: {Object oriented modeling;Power system modeling;Concrete;Application software;Database systems;Computer Society;Instruction sets;Object oriented programming},
 
-# Still Open Problems in Data Warehouse and Data Lake Research
+---
+## Still Open Problems in Data Warehouse and Data Lake Research
 Robert Wrembel
 Poznan University of Technology
 Faculty of Computing and Telecommunications
@@ -368,7 +379,8 @@ traditional data sources, and secondly - because there are many
 more data models and formats to be handled while integrating
 data.
 
-# An ontological approach to handle multidimensional schema evolution for data warehouse
+---
+## An ontological approach to handle multidimensional schema evolution for data warehouse
 M. Thenmozhi and K. Vivekanandan, “An ontological approach to handle multidimensional schema
 evolution for data warehouse,” International Journal of Database Management Systems, vol. 6, no. 4,
 pp. 33–52, 2014.
