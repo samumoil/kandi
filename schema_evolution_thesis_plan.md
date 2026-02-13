@@ -1204,8 +1204,95 @@ SOURCE: Scopus
 
 
 
+## p448-449 - Kuinka paljon NoSQL skeemat kasvavat projektin edetessä?
+```
+What is the Growth in Complexity of the NoSQL Schema?
+
+In empirical studies on relational schema evolution, the number of tables is
+considered a simple approximation for schema complexity [9]. Accordingly, we
+track the number of entity-classes over time in Fig. 3 (based on a visualization
+idea from [14]). For each project, one chart is shown. On the horizontal axis, we
+track the progress of the project, measured as the percentage of git commits
+analyzed. For the madcap project, this is based on 853 commits (c.f. Table 1).
+On the vertical axis, we track the size of the NoSQL database schema using two
+metrics. One is the number of entity-classes (blue solid line). This metric is also
+normalized w.r.t. its maximum throughout the project history. So for madcap,
+the 100% peak corresponds to 82 entity-classes, some of which were removed
+in the later phase of the project. We refer to Table 1 for the exact number of
+entity-classes added and removed.
+The second line denotes a “proxy metric” [9] for the size of the NoSQL
+schema, where we count the lines of code of entity-classes (including superclasses,
+excluding comments and empty lines), and thereby compute the Schema-LoC .10
+There is shrinkage, yet overall, schema complexity increases.
+
+Results. 1) As in the study by Qiu et al. on relational software evolution [14], we
+can conﬁrm that while the projects diﬀer in their life-spans and commit activity, 
+in nearly all projects, the NoSQL schema grows over time. However, there
+are phases of refactoring, causing dips. 2) Apparently, Schema-LoC lends itself
+nicely as a proxy-metric, and we obtain high correlation coeﬃcients when com-
+paring to the number of entity-classes. As Schema-LoC depends on the number
+of attributes in an entity-class, we can retrace an eﬀect reported in [14], namely
+that entity-classes and their attributes (corresponding to tables and columns)
+have largely analogous dynamics. 3) In general, the schema grows more than
+it shrinks. This is in line with studies on relational schema evolution. 4) One
+observation in [14] was that the schema stabilizes early: There, for 7 out of 10
+projects, 60% of the maximum number of tables is reached in the ﬁrst 20% of
+the commits. Interestingly, in our study, the number of entity-classes reaches
+the 60% in only 4 projects. 5) In [14], less than 2% of all commits contain valid
+schema changes (across all ten projects analyzed there). In our study, the share
+of commits with schema-relevant changes is between 2.8% and over 30%, with 4
+projects reaching over 20%. Clearly, we observe higher schema churn rates.
+
+```
+
+## p451 - Myös NoSQL skeemat muuttuvat ja suunta on pääosin kasvava
+```
+5 Discussion
+
+We can reproduce the main results from related work on relational schema evo-
+lution: There is strong evidence of NoSQL schema evolution, and additions are
+dominant schema changes. However, we do not see the schema stabilizing in
+the early phases of all projects, which may partly be due to shorter project life
+spans: The ten projects studied in [14] are PHP applications backed by relational
+databases, and have longer life cycles (two with ten years), more commits (start-
+ing at nearly 5K), and more lines of code. This is to be expected with a more
+mature software stack. Still, we do suspect that NoSQL developers evolve their
+schema more continuously. One indicator supporting this hypothesis is that a
+larger share of the commits contains code changes that aﬀect the schema.
+What stands out is that in relational schema evolution, type changes have
+been found to be among the most frequent schema changes [14,25], and we do
+not see this eﬀect in NoSQL schema evolution. One conjecture is that in the SQL
+data deﬁnition language (and its many dialects), there is a richer set of types. For
+instance, character data may be stored as char(n) varchar(n), nvarchar(n),
+or clob (a listing which is not necessarily exhaustive). In contrast, in Google
+Cloud Datastore, there are merely the Java types String and Text. Thus, it is
+plausible that we observe fewer type changes in NoSQL schemas.
+The fact that denormalization is common shows that solutions for managing
+relational schema evolution, involving ﬂat tuples, will not transfer immediately.
+Rather, when devising frameworks, we may want to turn to related work on
+frameworks for handling schema evolution in XML (e.g. [8,11]) or object-oriented
+databases (e.g. [26]) for inspiration on what has shown to be feasible.
+```
 
 
+
+
+
+
+---
+## An empirical analysis of the co-evolution of schema and code in database applications
+
+Qiu D., Li B., Su Z.
+AUTHOR FULL NAMES: Qiu, Dong (36618249400); Li, Bixin (9334814500); Su, Zhendong (7402248744)
+36618249400; 9334814500; 7402248744
+An empirical analysis of the co-evolution of schema and code in database applications
+(2013) 2013 9th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering, ESEC/FSE 2013 - Proceedings, pp. 125 - 135, Cited 83 times.
+DOI: 10.1145/2491411.2491431
+https://www.scopus.com/inward/record.uri?eid=2-s2.0-84883716265&doi=10.1145%2f2491411.2491431&partnerID=40&md5=b97de8a9da048d0646ad4834c43a4cba
+
+DOCUMENT TYPE: Conference paper
+PUBLICATION STAGE: Final
+SOURCE: Scopus
 
 
 
