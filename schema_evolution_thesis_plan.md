@@ -2,25 +2,28 @@
 
 ```
 Miten skeemaevoluution vaikutuksia voi minimoida tai hallita?
-(Kuinka yleinen ongelma skeemaevoluutio on?)
 ```
 
 # Runko
 
 0. Tiivistelmä
 1. Johdanto
+	- Mikä on tietokanta?
+	- Tietokannan suunnittelu
 	- Data warehouse <> data lake, erot, NoSQL
 2. Mitä on skeemaevoluutio?
 	- Syyt
+	- 
 	- Mitä se ihan oikeasti on?
-	- Pitääkö ottaa kantaa tietokantojen kehitykseen ja Big Data nousuun?
+	- Pitääkö ottaa kantaa tietokantojen kehitykseen ja Big Datan nousuun?
 3. Ratkaisumallit/vaihtoehdot
+	- Jätetään tekemättä
 4. <jotain vielä>
 5. Pohdinta
 
 # Query
 
-##SCOPUS
+SCOPUS:
 ```
 ( "schema evolution" ) OR ( "schema drift" ) AND ( LIMIT-TO ( SUBJAREA , "COMP" ) ) AND ( LIMIT-TO ( EXACTKEYWORD , "Etl" ) OR LIMIT-TO ( EXACTKEYWORD , "Extract Transform Loads" ) )
 -> 16 results
@@ -90,75 +93,6 @@ little attention from the research community [3, 35, 36, 40, 46, 58]. As a conse
 none of the commercial or open-source ETL tools existing on the market supports
 this functionality.
 
-
----
-
-## A study on the effect of a table’s involvement in foreign keys to its schema evolution
-Dimolikas K., Zarras A. V., and Vassiliadis P. A study on the effect of a table’s
-involvement in foreign keys to its schema evolution. In International Conference
-on Conceptual Modeling ER, volume 12400 of LNCS, pages 456–470. Springer,
-2020.
-
----
-
-## From Tracking Lineage to Enhancing Data Quality and Auditing: Adding Provenance Support to Data Warehouses
-Vieira, M., de Oliveira, T., Cicco, L., de Oliveira, D. and Bedo, M. (2024). From Tracking Lineage to Enhancing Data Quality and Auditing: Adding Provenance Support to Data Warehouses with ProvETL. In Proceedings of the 26th International Conference on Enterprise Information Systems - Volume 1: ICEIS; ISBN 978-989-758-692-7; ISSN 2184-4992, SciTePress, pages 313-320. DOI: 10.5220/0012634500003690
-
----
-
-## Using semantic web technologies to improve the extract transform load model
-Scopus
-EXPORT DATE: 11 February 2026
-
-Mahmoud A., Shams M.Y., Elzeki O.M., Awad N.A.
-AUTHOR FULL NAMES: Mahmoud, Amena (57221304054); Shams, Mahmoud Y. (57219465762); Elzeki, O.M. (57220855783); Awad, Nancy Awadallah (57221310903)
-57221304054; 57219465762; 57220855783; 57221310903
-Using semantic web technologies to improve the extract transform load model
-(2021) Computers, Materials and Continua, 68 (2), pp. 2711 - 2726, Cited 6 times.
-DOI: 10.32604/cmc.2021.015293
-https://www.scopus.com/inward/record.uri?eid=2-s2.0-85104877361&doi=10.32604%2fcmc.2021.015293&partnerID=40&md5=bd48682942908652ae7e1b33428689b9
-
-DOCUMENT TYPE: Article
-PUBLICATION STAGE: Final
-OPEN ACCESS: All Open Access; Gold Open Access
-SOURCE: Scopus
-
----
-## Evolution management in multi-model databases
-I. Holubová, M. Vavrek, and S. Scherzinger, “Evolution manage-
-ment in multi-model databases,” Data Knowl. Eng., vol. 136, 2021,
-Art. no. 101932.
-
----
-## Self-Adapting Design and Maintenance of Multi-Model Databases
-Irena Holubova, Pavel Koupil, and Jiaheng Lu. 2022. Self-Adapting Design and Maintenance of Multi-Model Databases. In Proceedings of the 26th International Database Engineered Applications Symposium (IDEAS '22). Association for Computing Machinery, New York, NY, USA, 9–15. https://doi-org.ezproxy.uef.fi:2443/10.1145/3548785.3548810
-
-
----
-## The Snowflake Elastic Data Warehouse. 
-Benoit Dageville, Thierry Cruanes, Marcin Zukowski, Vadim Antonov, Artin Avanes, Jon Bock, Jonathan Claybaugh, Daniel Engovatov, Martin Hentschel, Jiansheng Huang, Allison W. Lee, Ashish Motivala, Abdul Q. Munir, Steven Pelley, Peter Povinec, Greg Rahn, Spyridon Triantafyllis, and Philipp Unterbrunner. 2016. The Snowflake Elastic Data Warehouse. In Proceedings of the 2016 International Conference on Management of Data (SIGMOD '16). Association for Computing Machinery, New York, NY, USA, 215–226. https://doi-org.ezproxy.uef.fi:2443/10.1145/2882903.2903741
-
----
-## Graceful database schema evolution: the PRISM workbench
-Carlo A. Curino, Hyun J. Moon, and Carlo Zaniolo. 2008. Graceful database schema evolution: the PRISM workbench. Proc. VLDB Endow. 1, 1 (August 2008), 761–772. https://doi-org.ezproxy.uef.fi:2443/10.14778/1453856.1453939
-
----
-## Synchronization of Queries and Views Upon Schema Evolutions: A Survey. 
-Loredana Caruccio, Giuseppe Polese, and Genoveffa Tortora. 2016. Synchronization of Queries and Views Upon Schema Evolutions: A Survey. ACM Trans. Database Syst. 41, 2, Article 9 (June 2016), 41 pages. https://doi-org.ezproxy.uef.fi:2443/10.1145/2903726
-
----
-## CODS: evolving data efficiently and scalably in column oriented databases. 
-Ziyang Liu, Sivaramakrishnan Natarajan, Bin He, Hui-I Hsiao, and Yi Chen. 2010. CODS: evolving data efficiently and scalably in column oriented databases. Proc. VLDB Endow. 3, 1–2 (September 2010), 1521–1524. https://doi-org.ezproxy.uef.fi:2443/10.14778/1920841.1921028
-
----
-## Schema management for document stores
-Schema management for document stores
-Author PictureLanjun Wang, Author PictureShuo Zhang, Author PictureJuwei Shi, Author PictureLimei Jiao, Author PictureOktie Hassanzadeh, + 2
-Proceedings of the VLDB Endowment (PVLDB), Volume 8, Issue 9Pages 922–933https://doi-org.ezproxy.uef.fi:2443/10.14778/2777598.2777601
-
----
-## Data lake management: challenges and opportunities
-Fatemeh Nargesian, Erkang Zhu, Renée J. Miller, Ken Q. Pu, and Patricia C. Arocena. 2019. Data lake management: challenges and opportunities. Proc. VLDB Endow. 12, 12 (August 2019), 1986–1989. https://doi-org.ezproxy.uef.fi:2443/10.14778/3352063.3352116
 
 ---
 ## Inconsistency-Tolerant Integrity Checking
@@ -264,10 +198,6 @@ by Fernández Candel et al. [9]. An implementation of Athena
 and Orion are publicly available on a GitHub repository.9
 
 
----
-## Knowledge Graph-Enabled Cancer Data Analytics
-S. M. S. Hasan, D. Rivera, X. -C. Wu, E. B. Durbin, J. B. Christian and G. Tourassi, "Knowledge Graph-Enabled Cancer Data Analytics," in IEEE Journal of Biomedical and Health Informatics, vol. 24, no. 7, pp. 1952-1967, July 2020, doi: 10.1109/JBHI.2020.2990797.
-keywords: {Cancer;Resource description framework;Tumors;Data models;Libraries;Data analysis;Data visualization;Knowledge graph;cancer registry;treatment},
 
 ---
 ## A requirement-driven approach to the design and evolution of data warehouses,
@@ -354,20 +284,6 @@ method does not create an MD design from scratch, rather it
 can automatically absorb the new requirement and inte-
 grate it with the existing MD schema.
 
----
-## !!!!!!!!! The data warehouse lifecycle toolkit (2nd ed.)
-Kimball, R., & ProQuest. (2008). The data warehouse lifecycle toolkit (2nd ed.). Wiley Pub.,. http://ezproxy.uef.fi:2048/login?url=http://ebookcentral.proquest.com/lib/uef-ebooks/detail.action?docID=675005
-
----
-## !!!!!! Data Warehouse Systems - Design and Implementation, Second Edition
-Vaisman A. A. and Zimányi E. Data Warehouse Systems - Design and Imple-
-mentation, Second Edition. Data-Centric Systems and Applications. Springer,
-2022.
-
----
-## Materialization and its metaclass implementation
-M. Dahchour, A. Pirotte and E. Zimanyi, "Materialization and its metaclass implementation," in IEEE Transactions on Knowledge and Data Engineering, vol. 14, no. 5, pp. 1078-1094, Sept.-Oct. 2002, doi: 10.1109/TKDE.2002.1033775.
-keywords: {Object oriented modeling;Power system modeling;Concrete;Application software;Database systems;Computer Society;Instruction sets;Object oriented programming},
 
 ---
 ## Still Open Problems in Data Warehouse and Data Lake Research
@@ -401,7 +317,161 @@ more data models and formats to be handled while integrating
 data.
 
 ---
+## Graceful database schema evolution: the PRISM workbench
+Carlo A. Curino, Hyun J. Moon, and Carlo Zaniolo. 2008. Graceful database schema evolution: the PRISM workbench. Proc. VLDB Endow. 1, 1 (August 2008), 761–772. https://doi-org.ezproxy.uef.fi:2443/10.14778/1453856.1453939
+
+
+### p761 Skeema-muutoksen vaikutuksia
+Both
+practitioners and researchers are well aware that schema
+modifications can: (i) dramatically impact both data and
+queries [8], endangering the data integrity, (ii) require ex-
+pensive application maintenance for queries, and (iii) cause
+unacceptable system downtimes. 
+
+### p761 Avoimen lähdekoodin web-asiat ovat erityisen alttiita muutoksille
+The problem is particu-
+larly serious in Web Information Systems, such as Wikipedia
+[33], where significant downtimes are not acceptable while a
+mounting pressure for schema evolution follows from the di-
+verse and complex requirements of its open-source, collabo-
+rative software-development environment [8].
+
+
+### p762 SMO ja miten PRISM toimii lyhyesti
+PRISM exploits the concept of Schema Modification
+Operators (SMO) [4], representing atomic schema changes,
+which we then modify and enhance by (i) introducing the
+use of functions for data type and semantic conversions, (ii)
+providing a mapping to Disjunctive Embedded Dependen-
+cies (DEDs), (iii) obtain invertibility results compatible to
+[13], and (iv) define the translation into efficient SQL prim-
+itives to perform the data migration.
+
+
+### p771-772 PRISM tarkempi kuvaus, ratkaisu skeemaevoluution hallintaan
+We presented PRISM, a tool that supports the time-
+consuming and error-prone activity of Schema Evolution.
+The system provides the DBA with a concise operational
+language to represent schema change and increases predictabil-
+ity of the evolution being designed by automatically verify-
+ing information preservation, redundancy and query sup-
+port. The SMO-based representation of the schema evo-
+lution is used to derive logical mappings between schema
+versions. Legacy queries are thus supported by means of
+query rewriting or automatically generated SQL views.
+The system provides interfaces with commercial relational
+DBMSs to implement the actual data migration and to de-
+ploy views and rewritten queries. As a by-product, the
+schema evolution history is recorded. This represents an in-
+valuable piece of information for the purposes of documenta-
+tion, database flash back, and DBA education. Continuous
+validation against challenging real-life evolution histories,
+such as the one of Wikipedia, proved invaluable in mold-
+ing PRISM into a system that builds on the theoretical
+foundations laid by recent research and provides a practical
+solution to the difficult problems of schema evolution.
+
+
+
+
+
+---
+## !!!!!! Self-tuning Database Systems: A Systematic Literature Review of Automatic Database Schema Design and Tuning
+[viite puuttuu]
+
+Tämä olikin pelkästään skeemasuunnittelua koskeva katsaus :(
+
+
+
+---
 ## An ontological approach to handle multidimensional schema evolution for data warehouse
 M. Thenmozhi and K. Vivekanandan, “An ontological approach to handle multidimensional schema
 evolution for data warehouse,” International Journal of Database Management Systems, vol. 6, no. 4,
 pp. 33–52, 2014.
+
+---
+
+## A study on the effect of a table’s involvement in foreign keys to its schema evolution
+Dimolikas K., Zarras A. V., and Vassiliadis P. A study on the effect of a table’s
+involvement in foreign keys to its schema evolution. In International Conference
+on Conceptual Modeling ER, volume 12400 of LNCS, pages 456–470. Springer,
+2020.
+
+---
+
+## From Tracking Lineage to Enhancing Data Quality and Auditing: Adding Provenance Support to Data Warehouses
+Vieira, M., de Oliveira, T., Cicco, L., de Oliveira, D. and Bedo, M. (2024). From Tracking Lineage to Enhancing Data Quality and Auditing: Adding Provenance Support to Data Warehouses with ProvETL. In Proceedings of the 26th International Conference on Enterprise Information Systems - Volume 1: ICEIS; ISBN 978-989-758-692-7; ISSN 2184-4992, SciTePress, pages 313-320. DOI: 10.5220/0012634500003690
+
+---
+
+## Using semantic web technologies to improve the extract transform load model
+Scopus
+EXPORT DATE: 11 February 2026
+
+Mahmoud A., Shams M.Y., Elzeki O.M., Awad N.A.
+AUTHOR FULL NAMES: Mahmoud, Amena (57221304054); Shams, Mahmoud Y. (57219465762); Elzeki, O.M. (57220855783); Awad, Nancy Awadallah (57221310903)
+57221304054; 57219465762; 57220855783; 57221310903
+Using semantic web technologies to improve the extract transform load model
+(2021) Computers, Materials and Continua, 68 (2), pp. 2711 - 2726, Cited 6 times.
+DOI: 10.32604/cmc.2021.015293
+https://www.scopus.com/inward/record.uri?eid=2-s2.0-85104877361&doi=10.32604%2fcmc.2021.015293&partnerID=40&md5=bd48682942908652ae7e1b33428689b9
+
+DOCUMENT TYPE: Article
+PUBLICATION STAGE: Final
+OPEN ACCESS: All Open Access; Gold Open Access
+SOURCE: Scopus
+
+---
+## Evolution management in multi-model databases
+I. Holubová, M. Vavrek, and S. Scherzinger, “Evolution manage-
+ment in multi-model databases,” Data Knowl. Eng., vol. 136, 2021,
+Art. no. 101932.
+
+---
+## Self-Adapting Design and Maintenance of Multi-Model Databases
+Irena Holubova, Pavel Koupil, and Jiaheng Lu. 2022. Self-Adapting Design and Maintenance of Multi-Model Databases. In Proceedings of the 26th International Database Engineered Applications Symposium (IDEAS '22). Association for Computing Machinery, New York, NY, USA, 9–15. https://doi-org.ezproxy.uef.fi:2443/10.1145/3548785.3548810
+
+
+---
+## The Snowflake Elastic Data Warehouse. 
+Benoit Dageville, Thierry Cruanes, Marcin Zukowski, Vadim Antonov, Artin Avanes, Jon Bock, Jonathan Claybaugh, Daniel Engovatov, Martin Hentschel, Jiansheng Huang, Allison W. Lee, Ashish Motivala, Abdul Q. Munir, Steven Pelley, Peter Povinec, Greg Rahn, Spyridon Triantafyllis, and Philipp Unterbrunner. 2016. The Snowflake Elastic Data Warehouse. In Proceedings of the 2016 International Conference on Management of Data (SIGMOD '16). Association for Computing Machinery, New York, NY, USA, 215–226. https://doi-org.ezproxy.uef.fi:2443/10.1145/2882903.2903741
+
+
+---
+## Synchronization of Queries and Views Upon Schema Evolutions: A Survey. 
+Loredana Caruccio, Giuseppe Polese, and Genoveffa Tortora. 2016. Synchronization of Queries and Views Upon Schema Evolutions: A Survey. ACM Trans. Database Syst. 41, 2, Article 9 (June 2016), 41 pages. https://doi-org.ezproxy.uef.fi:2443/10.1145/2903726
+
+---
+## CODS: evolving data efficiently and scalably in column oriented databases. 
+Ziyang Liu, Sivaramakrishnan Natarajan, Bin He, Hui-I Hsiao, and Yi Chen. 2010. CODS: evolving data efficiently and scalably in column oriented databases. Proc. VLDB Endow. 3, 1–2 (September 2010), 1521–1524. https://doi-org.ezproxy.uef.fi:2443/10.14778/1920841.1921028
+
+---
+## Schema management for document stores
+Schema management for document stores
+Author PictureLanjun Wang, Author PictureShuo Zhang, Author PictureJuwei Shi, Author PictureLimei Jiao, Author PictureOktie Hassanzadeh, + 2
+Proceedings of the VLDB Endowment (PVLDB), Volume 8, Issue 9Pages 922–933https://doi-org.ezproxy.uef.fi:2443/10.14778/2777598.2777601
+
+---
+## Data lake management: challenges and opportunities
+Fatemeh Nargesian, Erkang Zhu, Renée J. Miller, Ken Q. Pu, and Patricia C. Arocena. 2019. Data lake management: challenges and opportunities. Proc. VLDB Endow. 12, 12 (August 2019), 1986–1989. https://doi-org.ezproxy.uef.fi:2443/10.14778/3352063.3352116
+
+---
+## Knowledge Graph-Enabled Cancer Data Analytics
+S. M. S. Hasan, D. Rivera, X. -C. Wu, E. B. Durbin, J. B. Christian and G. Tourassi, "Knowledge Graph-Enabled Cancer Data Analytics," in IEEE Journal of Biomedical and Health Informatics, vol. 24, no. 7, pp. 1952-1967, July 2020, doi: 10.1109/JBHI.2020.2990797.
+keywords: {Cancer;Resource description framework;Tumors;Data models;Libraries;Data analysis;Data visualization;Knowledge graph;cancer registry;treatment},
+
+---
+## !!!!!!!!! The data warehouse lifecycle toolkit (2nd ed.)
+Kimball, R., & ProQuest. (2008). The data warehouse lifecycle toolkit (2nd ed.). Wiley Pub.,. http://ezproxy.uef.fi:2048/login?url=http://ebookcentral.proquest.com/lib/uef-ebooks/detail.action?docID=675005
+
+---
+## !!!!!! Data Warehouse Systems - Design and Implementation, Second Edition
+Vaisman A. A. and Zimányi E. Data Warehouse Systems - Design and Imple-
+mentation, Second Edition. Data-Centric Systems and Applications. Springer,
+2022.
+
+---
+## Materialization and its metaclass implementation
+M. Dahchour, A. Pirotte and E. Zimanyi, "Materialization and its metaclass implementation," in IEEE Transactions on Knowledge and Data Engineering, vol. 14, no. 5, pp. 1078-1094, Sept.-Oct. 2002, doi: 10.1109/TKDE.2002.1033775.
+keywords: {Object oriented modeling;Power system modeling;Concrete;Application software;Database systems;Computer Society;Instruction sets;Object oriented programming},
