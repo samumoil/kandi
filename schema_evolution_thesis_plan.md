@@ -33,7 +33,7 @@ SCOPUS:
 
 # Lähteet ja lainaukset
 
----
+-----
 
 ## Repairing ETL Processes using Extended Relational Algebra
 Awiti, J., Wrembel, R. & Zimányi, E. (2025). Repairing ETL Processes using Extended Relational Algebra. Foundations of Computing and Decision Sciences, 50(2), 2025. 157-190. https://doi.org/10.2478/fcds-2025-0006
@@ -101,7 +101,7 @@ this functionality.
 ```
 
 
----
+-----
 ## Inconsistency-Tolerant Integrity Checking
 H. Decker and D. Martinenghi, "Inconsistency-Tolerant Integrity Checking," in IEEE Transactions on Knowledge and Data Engineering, vol. 23, no. 2, pp. 218-234, Feb. 2011, doi: 10.1109/TKDE.2010.87.
 keywords: {Database systems;Data mining;Warehousing;Data quality;Transaction databases;Knowledge engineering;Integrity checking;inconsistency tolerance.},
@@ -153,7 +153,7 @@ cases is delayed.
 ```
 
 
----
+-----
 ## A Generic Schema Evolution Approach for NoSQL and Relational Databases
 A. H. Chillón, M. Klettke, D. S. Ruiz and J. G. Molina, "A Generic Schema Evolution Approach for NoSQL and Relational Databases," in IEEE Transactions on Knowledge and Data Engineering, vol. 36, no. 7, pp. 2774-2789, July 2024, doi: 10.1109/TKDE.2024.3362273.
 keywords: {Data models;Taxonomy;Codes;Databases;Engines;Aggregates;Relational databases;NoSQL databases;schema evolution;Evolution management;taxonomy of changes;schema change operations},
@@ -218,7 +218,7 @@ and Orion are publicly available on a GitHub repository.9
 
 
 
----
+-----
 ## A requirement-driven approach to the design and evolution of data warehouses,
 Petar Jovanovic, Oscar Romero, Alkis Simitsis, Alberto Abelló, Daria Mayorova,
 A requirement-driven approach to the design and evolution of data warehouses,
@@ -315,7 +315,7 @@ grate it with the existing MD schema.
 ```
 
 
----
+-----
 ## Still Open Problems in Data Warehouse and Data Lake Research
 Robert Wrembel
 Poznan University of Technology
@@ -348,7 +348,7 @@ more data models and formats to be handled while integrating
 data.
 ```
 
----
+-----
 ## Graceful database schema evolution: the PRISM workbench
 Carlo A. Curino, Hyun J. Moon, and Carlo Zaniolo. 2008. Graceful database schema evolution: the PRISM workbench. Proc. VLDB Endow. 1, 1 (August 2008), 761–772. https://doi-org.ezproxy.uef.fi:2443/10.14778/1453856.1453939
 
@@ -412,9 +412,9 @@ foundations laid by recent research and provides a practical
 solution to the difficult problems of schema evolution.
 ```
 
----
+-----
 
----
+-----
 ## !!!!!!!!! The data warehouse lifecycle toolkit (2nd ed.)
 Kimball, R., & ProQuest. (2008). The data warehouse lifecycle toolkit (2nd ed.). Wiley Pub.,. http://ezproxy.uef.fi:2048/login?url=http://ebookcentral.proquest.com/lib/uef-ebooks/detail.action?docID=675005
 
@@ -435,7 +435,7 @@ The ETL system described in Chapters 9 and 10 and constructed for your first del
 ```
 
 
----
+-----
 ## Significance and challenges of big data research
 X. Jin, B.W. Wah, X. Cheng, Y. Wang, “Significance and challenges of
 big data research”, Big Data Research, 2:(2), 2015, pp. 59–64
@@ -481,7 +481,7 @@ some inherent unpredictability of data.
 ```
 
 
----
+-----
 
 ## !!!!! A study on the effect of a table’s involvement in foreign keys to its schema evolution
 Dimolikas K., Zarras A. V., and Vassiliadis P. A study on the effect of a table’s
@@ -554,7 +554,7 @@ tauluja tai muutetaan vanhojen taulujen attribuutteja.
 ```
 
 
----
+-----
 ## Evolution management in multi-model databases
 I. Holubová, M. Vavrek, and S. Scherzinger, “Evolution manage-
 ment in multi-model databases,” Data Knowl. Eng., vol. 136, 2021,
@@ -596,7 +596,7 @@ main advantages of the proposal are as follows:
 
 
 
----
+-----
 ## CODS: evolving data efficiently and scalably in column oriented databases. 
 Ziyang Liu, Sivaramakrishnan Natarajan, Bin He, Hui-I Hsiao, and Yi Chen. 2010. CODS: evolving data efficiently and scalably in column oriented databases. Proc. VLDB Endow. 3, 1–2 (September 2010), 1521–1524. https://doi-org.ezproxy.uef.fi:2443/10.14778/1920841.1921028
 
@@ -616,7 +616,7 @@ investigated. Currently, data evolution is expressed and executed
 at query level, i.e., via SQL queries. 
 ```
 
----
+-----
 ## An Empirical Study on the Design and Evolution of NoSQL Database Schemas
 
 Scherzinger S., Sidortschuck S.
@@ -709,7 +709,7 @@ databases (e.g. [26]) for inspiration on what has shown to be feasible.
 
 
 
----
+-----
 ## An empirical analysis of the co-evolution of schema and code in database applications
 
 Qiu D., Li B., Su Z.
@@ -810,7 +810,7 @@ total number of atomic schema changes occurred).
 ```
 
 
----
+-----
 ## Handling evolution in big data architectures
 
 Scopus
@@ -888,7 +888,7 @@ schema evolution is not considered or may be implemented only manually.
 
 
 
----
+-----
 ## Knowledge Graph-Enabled Cancer Data Analytics
 S. M. S. Hasan, D. Rivera, X. -C. Wu, E. B. Durbin, J. B. Christian and G. Tourassi, "Knowledge Graph-Enabled Cancer Data Analytics," in IEEE Journal of Biomedical and Health Informatics, vol. 24, no. 7, pp. 1952-1967, July 2020, doi: 10.1109/JBHI.2020.2990797.
 keywords: {Cancer;Resource description framework;Tumors;Data models;Libraries;Data analysis;Data visualization;Knowledge graph;cancer registry;treatment},
@@ -908,7 +908,7 @@ changing the core software code that uses the knowledge graph
 
 
 
----
+-----
 ## Data lake management: challenges and opportunities
 Fatemeh Nargesian, Erkang Zhu, Renée J. Miller, Ken Q. Pu, and Patricia C. Arocena. 2019. Data lake management: challenges and opportunities. Proc. VLDB Endow. 12, 12 (August 2019), 1986–1989. https://doi-org.ezproxy.uef.fi:2443/10.14778/3352063.3352116
 
@@ -935,103 +935,365 @@ ture, content, and data quality. Only then would the data
 in data lakes become actionable.
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-## An ontological approach to handle multidimensional schema evolution for data warehouse
-M. Thenmozhi and K. Vivekanandan, “An ontological approach to handle multidimensional schema
-evolution for data warehouse,” International Journal of Database Management Systems, vol. 6, no. 4,
-pp. 33–52, 2014.
-
-
-
----
-
-## From Tracking Lineage to Enhancing Data Quality and Auditing: Adding Provenance Support to Data Warehouses
-Vieira, M., de Oliveira, T., Cicco, L., de Oliveira, D. and Bedo, M. (2024). From Tracking Lineage to Enhancing Data Quality and Auditing: Adding Provenance Support to Data Warehouses with ProvETL. In Proceedings of the 26th International Conference on Enterprise Information Systems - Volume 1: ICEIS; ISBN 978-989-758-692-7; ISSN 2184-4992, SciTePress, pages 313-320. DOI: 10.5220/0012634500003690
-
----
-
-## Using semantic web technologies to improve the extract transform load model
-Scopus
-EXPORT DATE: 11 February 2026
-
-Mahmoud A., Shams M.Y., Elzeki O.M., Awad N.A.
-AUTHOR FULL NAMES: Mahmoud, Amena (57221304054); Shams, Mahmoud Y. (57219465762); Elzeki, O.M. (57220855783); Awad, Nancy Awadallah (57221310903)
-57221304054; 57219465762; 57220855783; 57221310903
-Using semantic web technologies to improve the extract transform load model
-(2021) Computers, Materials and Continua, 68 (2), pp. 2711 - 2726, Cited 6 times.
-DOI: 10.32604/cmc.2021.015293
-https://www.scopus.com/inward/record.uri?eid=2-s2.0-85104877361&doi=10.32604%2fcmc.2021.015293&partnerID=40&md5=bd48682942908652ae7e1b33428689b9
-
-DOCUMENT TYPE: Article
-PUBLICATION STAGE: Final
-OPEN ACCESS: All Open Access; Gold Open Access
-SOURCE: Scopus
-
-
-
-
-
-
-
----
-## The Snowflake Elastic Data Warehouse. 
-Benoit Dageville, Thierry Cruanes, Marcin Zukowski, Vadim Antonov, Artin Avanes, Jon Bock, Jonathan Claybaugh, Daniel Engovatov, Martin Hentschel, Jiansheng Huang, Allison W. Lee, Ashish Motivala, Abdul Q. Munir, Steven Pelley, Peter Povinec, Greg Rahn, Spyridon Triantafyllis, and Philipp Unterbrunner. 2016. The Snowflake Elastic Data Warehouse. In Proceedings of the 2016 International Conference on Management of Data (SIGMOD '16). Association for Computing Machinery, New York, NY, USA, 215–226. https://doi-org.ezproxy.uef.fi:2443/10.1145/2882903.2903741
-
-
----
+-----
 ## Synchronization of Queries and Views Upon Schema Evolutions: A Survey. 
 Loredana Caruccio, Giuseppe Polese, and Genoveffa Tortora. 2016. Synchronization of Queries and Views Upon Schema Evolutions: A Survey. ACM Trans. Database Syst. 41, 2, Article 9 (June 2016), 41 pages. https://doi-org.ezproxy.uef.fi:2443/10.1145/2903726
+
+
+### Skeemaevoluution määritelmä ja tarve
+
+```
+During the life cycle of an information system, it is often necessary to modify the
+schema of the underlying database. This might occur either to correct previous design
+and implementation errors or to adapt the information system to changes in the real
+world. This is a well-known and critical problem, named Schema Evolution, which
+has drawn the attention of many researchers in the database community. In fact,
+there are many artifacts depending on the old version of a database schema, which
+might need to be modified in order to continue work on the new schema.
+```
+
+### Skeemaevoluutiossa erityisesti views+queries täytyy synkronisoida
+
+```
+In particular,
+queries and views might no longer work properly if the schema update operations
+concern constructs of the old schema on which they were defined. Thus, they need to
+be synchronized to the new schema.
+There are many other contexts in which it is necessary to synchronize queries and
+views upon schema evolution operations, for example, in data warehouses, data inte-
+gration systems, web services, and mashup development [Moro et al. 2007].
+The problem of synchronizing queries and views upon a schema evolution has been
+faced since 1982, and it has been considered a major bottleneck in system conversion.
+```
+
+### Erilaisia tapoja selvitä skeemaevoluutiosta
+
+```
+Thus, the research community has focused
+its attention on the development of approaches capable of mitigating the inherent com-
+plexity of the synchronization process, such as (1) approaches applying updates in a
+lazy fashion or (2) approaches capable of tolerating the presence of queries and views
+working on previous versions of a database schema. Lazy update approaches have
+been proposed to cope with delayed synchronization processes [Ferrandina et al. 1994],
+whereas tolerating approaches assume that only new applications are relevant, while
+old ones are discarded. When old applications have to be maintained, schema version-
+ing provides an alternative solution to the query/view synchronization problem [De
+Castro et al. 1997; Grandi and Mandreoli 2003; Jørgensen and Böhlen 2007; Jensen
+and Böhlen 2002]. The adoption of schema versioning lets old applications continue
+work with the old schema, whereas new applications will work with the new schema.
+```
+
+### Kuva/taulukko, miten skeemaevoluutio vaikuttaa sekä koodiin että dataan (myös dataevoluutio!!!)
+
+Kuvasta nähdään hyvin, miten skeemaevoluutio aiheuttaa tarpeen muuttaa myös sovelluskoodia että itse datan päivitys.
+
+![kuva_taulusta](./src/table_schema_evolution_and_related.png)
+
+### Operaatiopohjainen skeemaevoluution määritelmä
+
+Tämä näkökulma tarkastelee skeemaevoluutiota sen perustella, millä komennoilla skeemaa muutetaan.
+
+```
+Operation based includes approaches based on the editing process, that is, approaches
+that define schema modification commands to implement each type of supported
+changes. More specifically, the operation-based approaches define several modification
+operations to specify the effects of single modifications on both schemas and instances
+(see Banerjee et al. [1987], Zicari [1991], Roddick et al. [1993], Peters and Özsu [1997],
+and Moro et al. [2007]). Such approaches enable the management of both simple and
+composed schema modifications.
+
+As an example, by using the schema modification operators defined in the SMO
+language [Curino et al. 2008b], an operation-based specification of the schema evolution
+S →S of Figure 1 is
+
+DROP COLUMN positioning FROM ATMPoint. 
+```
+
+### Mapping based skeemaevoluution määritelmä
+
+Tämä näkökuilma tarkastelee skeemaevoluutiota sen perusteella, mitä yhteisiä ominaisuuksia ja eroja alkuperäisellä ja lopullisella skeemalla on. Ominaisuudet "mäpätään".
+
+```
+Mapping based includes approaches based on the editing result, that is, approaches
+that allow one to modify the schemas as necessary and then compare the two schema
+versions [Lerner 2000]. Thus, they mainly focus on the detection of correspondences
+between schema versions, which can be represented by means of mappings [Bertino
+1992; Lakshmanan et al. 1993; Lerner 2000; Bernstein et al. 2000; Bernstein and
+Rahm 2000; Melnik 2004; Bernstein 2003; Bernstein and Melnik 2007; Velegrakis et al.
+2004a].
+```
+
+### Data Warehouse määritelmä
+
+**Tässä tutkielmassa käsitellään vain perinteisiä tietokantoja, Data warehouse sekä data lake -tyyppisiä kantoja.**
+
+```
+Data Warehouses (DWs) are specialized databases mainly used to support business
+decisions. They store data collected from several operational databases and possibly
+from several external information sources. The development of Data Warehouses can
+be accomplished either by defining global views on a data source or by loading data
+from different data sources onto a reconciled database by means of ETL (Extraction,
+Transformation, and Loading) procedures. Moreover, DWs are bas
+ed on a multidimen-
+sional data model, in which data represent facts associated to numerical measures that
+can be analyzed along several dimensions [Pedersen and Jensen 2001]. Analyses on
+Data Warehouses are mainly performed by means of OLAP (OnLine Analytical Process-
+ing) queries and Data Mining techniques.
+```
+
+### Miten skeemaevoluutio vaikuttaa Data Warehouseen
+
+```
+Since the evolution of a source data schema
+might corrupt the mappings between the DW and the modified source, it can be easily
+figured out how the QVS problem might be crucial also in this application domain.
+In fact, upon the evolution of a source schema, it might be necessary to synchronize
+some of the queries used to construct the global view, or some ETL procedures in case
+a reconciled schema is constructed. However, if the evolution of the source schema
+also affects the structure of the global view or the reconciled schema, it might also be
+necessary to synchronize OLAP queries and/or Data Mining applications defined on
+the DW [Bellahsene 2002].
+```
+
+### Kuva tutkimuksen läpikäymistä malleista ja mallien sijoittumisesta matriisiin
+
+**Tässä tutkimuksessa katsotaan vain data warehouse ja generic db -kategorioita!**
+
+![kuva_taulusta](./src/table_schema_evolution_approaches.png)
+
+
+### Operaatiokeskeiset näkökulmat taulukossa
+
+**Tämän taulukon perusteella minun tutkielman tarkasteluun valitaan vain AQF. Tämä perustuen siihen, että se on ainut kahdesta toteutetusta mallista, joka koskettaa joko DW tai geneeristä tietokantaa (AQF tapauksessa geneeristä tietokanta).**
+
+![kuva_taulusta](./src/table_operation_based_approaches.png)
+
+### Mapping based näkökulmat taulukossa
+
+**Tämän taulukon perusteella minun tutkielmassa tarkastellaan vain XPathS, koska se on ainut toteutettu malli ja sopii geneerisen tietokannan käsittelyyn.**
+
+![kuva_taulusta](./src/table_mapping_based_approaches.png)
+
+
+### Hybridinäkökulmat taulukossa
+
+**Tämän taulukon perusteella minun tutkielmassa tarkastellaan vain PRISM, koska se on ainut toteutettu malli, joka tarkastelee geneerisiä tietokantoja.**
+
+![kuva_taulusta](./src/table_hybrid_approaches.png)
+
+
+### Valitut mallit tarkasteluun: AQF, XPathS, PRISM
+
+### AQF
+
+```
+4.5. The Adaptive Query Formulation Approach (AQF)
+The adaptive query formulation approach (AQF) exploits a graph model to represent
+relations, views, constraints, and queries in a uniform way [Papastefanatos et al. 2006,
+2007, 2009]. In particular, the entities of a database (e.g., relations, queries, views,
+and conditions of both the queries and the database) are modeled by means of nodes
+and edges of a directed graph. Other than representing the semantics of the database
+system, the graph allows us to predict the impact of a modification over the entire
+system.
+
+The approach supports simple modifications (creation and deletion of relations, at-
+tributes, and conditions) and enables the definition of three types of policies: propagate
+the modifications (queries/views must be redefined), block the modifications (the in-
+tention here is to preserve the old semantics of the graph; hence, modification events
+must be blocked, or at least constrained, so as to preserve the old semantics), and
+prompt (the DBA interactively decides what to do). In other words, for each entity of
+the database, the approach prescribes how to handle each possible modification event
+by annotating the associated graph construct with the policy to be applied. The policy
+and the modifications activated on the graph constructs are specified locally to the
+views.
+
+The synchronization of queries/views upon a modification event on a database schema
+is accomplished by determining the involved data structures and by applying their as-
+sociated policies, which also determines how the graph will be affected. In this way, it
+is possible to define the actions to be applied (possibly automatically) by selecting the
+predominant policy among those defined for all the constructs affected by the modifi-
+cation. Notice that the application of a policy is itself considered as a new modification
+event.
+
+The whole approach has been implemented within the HECATAEUS tool
+[Papastefanatos et al. 2008, 2010], which allows performing what-if analyses by graph-
+ically simulating the effects of modifications on the schema and their impact on queries,
+views, and the schema itself.
+
+As an example, let us consider the evolution S →S described in Figure 1, where
+the attribute positioning is deleted from ATMPoint. After the evolution, all the
+queries/views referring to this attribute become syntactically invalid and need to be
+rewritten, as it happens for AtmBrPos given in Equation (7). If the DBA specified a
+“propagate” policy on the attribute selection, the view NewAtmBrPos given in Equa-
+tion (8) could be automatically derived as a QVS of AtmBrPos.
+
+The semantic issues of the approach can be summarized as follows:
+—The synchronization process is based on the specification of policies on the graph
+constructs. The predefined policy specification is useful for the management of infor-
+mation loss, and it permits the local synchronization to queries/views.
+—One type of policy invokes the DBA supervision in order to determine whether to
+permit or to inhibit a schema modification. For this reason, the automation level of
+the synchronization is semi.
+—There is the possibility that more than one synchronization policy is simultaneously
+activated; to this end, the authors defined a guideline based on the “policy prevalence”
+among several synchronizations.
+—The what-if analysis defined within the tool HECATAEUS permits one to evaluate
+the impact of change.
+
+```
+
+### XPathS
+
+```
+5.5. The Synchronization of XPath Views (XPathS)
+A particular class of data sources is represented by XML sources, whose popularity
+is growing, due to the necessity of modeling huge quantities of semistructured data
+available on the web. Such data sources are composed of documents containing data
+structured according to a schema defined through simple formalisms, like Document
+Type Definitions (DTDs), or more complex formalisms, like XML schemas.
+
+In order to access data stored within XML documents, it is necessary to use a query
+language enabling the retrieval of elements from them. To this end, one of the most
+popular languages is XPath, which allows the specification of powerful queries. It is a
+Unix-like language, since the basic syntax of an XPath query resembles that of a file
+path in Unix. Thus, the access to parts of XML documents is realized by defining views
+on data by means of XPath. The schema of an XML document can either be contained
+in an external file identified by an URL or be embedded in the document itself. In
+both cases, a modification of the document might invalidate the views defined on it,
+requiring a synchronization process to adapt them to the new schema.
+
+This problem has been analyzed by Pedersen and Pedersen [2004a, 2004b], who faced
+the automatic update of parameterized XPath queries. In their work, they aimed at
+finding modifications to the XML source schema and at updating XPath-based views
+to reflect such modifications. Moreover, they defined a prototype implementing basic
+algorithms for XPath query synchronization.
+
+The approach for finding possible modifications to XML schemas is based on the
+analysis of query results. However, such queries might return empty results because
+of possible modifications to the schema, or they might return incorrect results. For this
+reason, the approach also provides an algorithm to detect such cases, by comparing
+the result of the current query with that of the previous one. Once a modification
+to the XML schema is found, a heuristic algorithm determines the query that best
+approximates the original one, by exploiting a policy that evaluates the similarity of
+queries, based on the similarity of their results.
+
+Although the approach has been implemented for OLAP-based systems and XML
+data sources (Extended TARGIT system [Pedersen and Pedersen 2004b; Pedersen et al.
+2008]), it provides general techniques that are applicable to all those situations in
+which there are views defined on XML data, as in Web services, B2B applications, and
+XML-based websites.
+
+The semantic issues of the approach can be summarized as follows:
+
+—The synchronization process is based on a heuristic algorithm that finds the best
+synchronization based on the query results. Consequently, the algorithm must choose
+among several synchronization options.
+—The query result is analyzed, also to get the traceability of changes.
+—The automation of synchronization is complete, and it applies approximations when
+necessary.
+—The policy of synchronization is global.
+
+```
+
+### PRISM
+
+```
+6.1. PRISM
+PRISM is one of the tools designed in the context of the macro project Pantha Rei,
+which includes several research projects concerning schema evolutions and related
+data management problems [Curino et al. 2008]. In particular, the approach underlying
+PRISM aims at reducing the gap between ideal solutions to schema evolution and the
+real world [Curino et al. 2008a, 2008b, 2008c; Moon et al. 2008; Curino et al. 2009,
+2010, 2013]. To this end, the authors provide several guidelines on what a system
+should offer to adequately support schema evolution and related problems. PRISM
+has been developed based on such guidelines, and it assists a DBA in the design of
+the schema evolution, guaranteeing the automatic processing of related queries. It
+accomplishes this task by devoting particular attention to information preservation,
+redundancy control, and reversibility.
+
+In order to let the DBA specify modifications to the schema, PRISM provides a mod-
+ification language exploiting Schema Modification Operators (SMOs), which represent
+a key element within the system. More specifically, an SMO is a function taking as in-
+put a relational data schema and an instance of it, and returning the modified version
+of them. For each SMO, it can be proved that it is possible to find a perfect and unique
+inverse.
+
+The approach prescribes the conversion of SMOs in the logic language Disjunctive
+Embedded Dependencies (DEDs), aiming at exploiting the power of logic languages in
+query reformulation. DED enables the definition of forward and backward mappings
+that permit one to determine how to switch from the old version of a schema to the
+new one, and vice versa. Thus, PRISM can be considered as a hybrid approach, due to
+the use of SMOs and local mappings based on DED. The QVS is performed through
+the query reformulation algorithm Mixed And Redundant Storage (MARS) [Deutsch
+and Tannen 2003], exploiting a technique named Chase & Backchase, which finds
+equivalent queries by only using DED rules and executing the two phases Chase and
+Backchase. In particular, during the Chase phase, new conjunctions are added to the
+query based on DED rules, thus deriving a universal plan. Vice versa, during the
+Backchase phase, all the possible atoms are removed from the universal plan, so as to
+derive an equivalent query.
+
+As an example, let us consider the evolution S→S of Figure 1, which can be defined
+through the following operator:
+
+DECOMPOSE TABLE ATMBranchPoint INTO
+ATMPoint(ATMcode, address, branch, positioning),
+Branch(branch, bank)
+
+The modification is converted into the correspondent DED, which is used by the
+algorithm MARS in order to automatically reformulate the queries/views. For instance,
+the view given in Equation (3) is automatically synchronized into
+
+NewIsInternal(ATMcode, bank)
+←(ATMPoint(ATMcode, address, branch, positioning) ∧
+Branch(branch, bank)) ∧
+∧ ATMPoint.branch = Branch.branch ∧
+∧ positioning = “internal”.
+
+The semantic issues of the approach can be summarized as follows:
+
+—The synchronization process uses the query reformulation algorithm MARS, which
+rewrites queries based on DED mappings associated to the modification operators.
+For each operator, two DED mappings (forward and backward) have been defined,
+which determine the operator invertibility. For this reason, by using DED mappings,
+it is possible to get transparency of evolution.
+—The evolution can be managed by users through an interface that contains interface
+operators, allowing one to evaluate the evolution impact and to manage the informa-
+tion loss through the DBA supervision prior to the evolution.
+—The policy of synchronization is global.
+—The automation level of the synchronization is complete.
+```
+
+
+### Skeemaevoluutio on skeemaversioinnin alaotsikko
+
+```
+Schema evolution can be considered a special case of schema versioning, where only
+the current version of a schema is maintained. In fact, in schema evolution, the goal
+is to ensure the possibility to perform schema modifications without losing existing
+data and preserving the semantics of queries/views, which is much more a reduced
+goal with respect to schema versioning, where the aim is to preserve the semantics of
+queries/views on any schema version.
+```
+
+
+
+
+### Vieläkään(!) ei ole ratkaisua ongelmaan
+
+```
+However, from the
+analysis made in this work, we can affirm that there is still a low number of imple-
+mented approaches that are effectively usable in practice. In fact, many approaches
+are either not implemented or implemented only at a prototype level. Thus, the QVS
+problem has been deeply analyzed in all of its aspects, but there is still no evidence
+about which tool(s) is (are) capable of completely solving the problem. This is mainly
+due to the fact that the implemented approaches are either too specific for a given
+application context (as, for example, the studies on XPath views and on ontologies, of
+Sections 5.5 and 6.5, respectively), are still immature or rudimentary and hence do not
+enable some types of modification operations, or handle the problem through different
+data models. In fact, although some of the surveyed approaches seem to be perfect
+from a theoretical and an architectural point of view, they still lack implementation
+accuracy and completeness.
+```
+
+
