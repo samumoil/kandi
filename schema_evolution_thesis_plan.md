@@ -88,7 +88,11 @@ DS schema, ETL objects, and a DW schema. Even though data lineage and structure
 lineage tools show which part of an ETL process was impacted by a DS change, they
 do not provide means for automatic or at least semi-automatic reparation of affected
 ETL processes. As a consequence, such repairs have to be done manually.
+``` 
+
 #### !!! jatkuu - ratkaisuja muuttuviin ETL prosesseihin ei ole vielä kunnolla tarjolla
+
+```
 In practice, large companies deploy dozens or even hundreds of thousands of ETL
 processes (e.g., in banking or pharma). Thus, a manual reparation of ETL processes
 is complex and costly w.r.t. time and money. Since structural changes in DSs are
@@ -101,12 +105,14 @@ this functionality.
 ```
 
 
+
+
 -----
 ## Inconsistency-Tolerant Integrity Checking
 H. Decker and D. Martinenghi, "Inconsistency-Tolerant Integrity Checking," in IEEE Transactions on Knowledge and Data Engineering, vol. 23, no. 2, pp. 218-234, Feb. 2011, doi: 10.1109/TKDE.2010.87.
 keywords: {Database systems;Data mining;Warehousing;Data quality;Transaction databases;Knowledge engineering;Integrity checking;inconsistency tolerance.},
 
-### p218 - Skeemaevoluution syitä - DBMS tuote vaihtuu, joten vaatimukset vaihtuu
+### p218 - Integrity violation syitä - DBMS tuote vaihtuu, joten vaatimukset vaihtuu
 ```
 Integrity violation may sneak into a database in many
 ways. For instance, new constraints may be added without
@@ -355,8 +361,7 @@ Carlo A. Curino, Hyun J. Moon, and Carlo Zaniolo. 2008. Graceful database schema
 
 ### p761 Skeema-muutoksen vaikutuksia
 ```
-Both
-practitioners and researchers are well aware that schema
+Both practitioners and researchers are well aware that schema
 modifications can: (i) dramatically impact both data and
 queries [8], endangering the data integrity, (ii) require ex-
 pensive application maintenance for queries, and (iii) cause
@@ -412,7 +417,6 @@ foundations laid by recent research and provides a practical
 solution to the difficult problems of schema evolution.
 ```
 
------
 
 -----
 ## !!!!!!!!! The data warehouse lifecycle toolkit (2nd ed.)
@@ -426,12 +430,17 @@ Created from uef-ebooks on 2026-02-13 09:55:30.
 ### Miksi muutoksia tapahtuu ja miksi se on hyvä merkki?
 ```
 Prepare for Growth and Evolution 
-A successful DW/BI system will evolve and grow. If anything, you should constantly be forced to throttle back the requests for new data sources, faster delivery of data, new data mining scores and labels, and new key performance indicators. A changing system is a sign of success, not failure. It indicates your existing business users are asking for more data and BI applications. At the same time, they're spreading the news about the DW/BI system at the grass roots level, so new users will be clamoring for data, tools, and applications. Everyone involved with the DW/BI system from both the business and IT communities should anticipate and appreciate the evolution of the system as it matures. The factors that influenced the early design of your data warehouse—including business sponsorship, users and their requirements, technical architecture, and available source data—are evolving rapidly. The Kimball Lifecycle approach is designed to help the data warehouse respond gracefully to change. Before you think about growth opportunities, you should assess your current environment. If your current system is not successful, we recommend you make adjustments before building anew on the same foundation. Next, develop procedures for prioritizing the many growth opportunities you'll receive. Finally, follow the Kimball Lifecycle from the beginning, adding new content and applications to the DW/BI system.
+A successful DW/BI system will evolve and grow. If anything, you should constantly be forced to throttle back the requests for new data sources, faster delivery of data, new data mining scores and labels, and new key performance indicators. A changing system is a sign of success, not failure. It indicates your existing business users are asking for more data and BI applications. At the same time, they're spreading the news about the DW/BI system at the grass roots level, so new users will be clamoring for data, tools, and applications. Everyone involved with the DW/BI system from both the business and IT communities should anticipate and appreciate the evolution of the system as it matures. The factors that influenced the early design of your data warehouse—including business sponsorship, users and their requirements, technical architecture, and available source data—are evolving rapidly. 
+```
+
+### Kimball Lifecycle on yksi tapa hoitaa muutosta?
+```
+The Kimball Lifecycle approach is designed to help the data warehouse respond gracefully to change. Before you think about growth opportunities, you should assess your current environment.
 ```
 
 ### ETL prosessin tuntemus apuna kehityksessä, MYÖS DATA QUALITY MANAGEMENT ja error event schema
 ```
-The ETL system described in Chapters 9 and 10 and constructed for your first deliverable should be a strong foundation for future development. It's common for second phase projects to have more complex ETL than the initial project. But as an offset, now your ETL developers have tool expertise, and have built the techniques and infrastructure for running the ETL system in your environment. The design we described for data quality tracking is intended to be expanded incrementally. Once the error event schema is in place, then data quality screens can be added one at a time indefinitely. A data quality team should constantly be improving quality by proposing and implementing new and better screens
+The ETL system described in Chapters 9 and 10 and constructed for your first deliverable should be a strong foundation for future development. It's common for second phase projects to have more complex ETL than the initial project. But as an offset, now your ETL developers have tool expertise, and have built the techniques and infrastructure for running the ETL system in your environment. The design we described for data quality tracking is intended to be expanded incrementally. Once the error event schema is in place, then data quality screens can be added one at a time indefinitely. A data quality team should constantly be improving quality by proposing and implementing new and better screens.
 ```
 
 
@@ -563,16 +572,11 @@ Art. no. 101932.
 ### Monimuotoisen tietokannan kuvaus
 
 ```
-While the core multi-model challenges have already been solved (at least to some extent) in order to enable the basic necessary
-functionality, there still remain advanced and complex tasks to be analyzed and fulfilled [4]. One of them, being our aim in this
-paper, is evolution management. As user requirements change, the data structures evolve, and, consequently, also the respective
-storage strategy, queries, etc. This problem is challenging even in the world of single-model databases. In simpler applications, we
-can rely on a skilled database administrator, but in more complex situations it is a difficult and error-prone task requiring correct
-and complete propagation of a change to all affected parts of the system. In addition, we can observe contradictory approaches
-to this problem in different types of DBMSs. In the world of traditional relational or XML databases, schema evolution requires
-immediate changes to both the schema and the data instance (eager propagation). With NoSQL systems, we can (to some extent)
-exploit the support for redundancy and schemalessness, i.e., the ability to store data with similar, but not necessarily the same
-structure, and propagate the changes when needed (lazy propagation). 
+While the core multi-model challenges have already been solved (at least to some extent) in order to enable the basic necessary functionality, there still remain advanced and complex tasks to be analyzed and fulfilled [4]. One of them, being our aim in this paper, is evolution management. 
+
+As user requirements change, the data structures evolve, and, consequently, also the respective storage strategy, queries, etc. This problem is challenging even in the world of single-model databases. In simpler applications, we can rely on a skilled database administrator, but in more complex situations it is a difficult and error-prone task requiring correct and complete propagation of a change to all affected parts of the system. In addition, we can observe contradictory approaches to this problem in different types of DBMSs. 
+
+In the world of traditional relational or XML databases, schema evolution requires immediate changes to both the schema and the data instance (eager propagation). With NoSQL systems, we can (to some extent) exploit the support for redundancy and schemalessness, i.e., the ability to store data with similar, but not necessarily the same structure, and propagate the changes when needed (lazy propagation).
 ```
 
 
@@ -580,14 +584,7 @@ structure, and propagate the changes when needed (lazy propagation).
 
 ```
 5. Conclusion
-Multi-model data instances have become a new phenomenon that fundamentally challenges traditional approaches to data
-management. Databases traditionally designed for highly specific tasks now need to be able to manage data whose particular
-sub-parts have different, even contradictory features and requirements for efficient processing. In addition, the changes in user
-requirements, that need to be reflected not only in the user-specified part, but also globally in all other affected parts, further
-complicate this issue.
-In this paper we showed the first step towards a robust solution of evolution management of multi-model data. We introduce a
-tool which enables users to specify required changes over a multi-model schema and propagates them across all sub-models. The
-main advantages of the proposal are as follows:
+Multi-model data instances have become a new phenomenon that fundamentally challenges traditional approaches to data management. Databases traditionally designed for highly specific tasks now need to be able to manage data whose particular sub-parts have different, even contradictory features and requirements for efficient processing. In addition, the changes in user requirements, that need to be reflected not only in the user-specified part, but also globally in all other affected parts, further complicate this issue. In this paper we showed the first step towards a robust solution of evolution management of multi-model data. We introduce a tool which enables users to specify required changes over a multi-model schema and propagates them across all sub-models. The main advantages of the proposal are as follows:
 
 • We cover all the currently popular data models.
 • We deal with both intra-model and inter-model changes.
@@ -634,10 +631,8 @@ SOURCE: Scopus
 
 
 
-### p448-449 - Kuinka paljon NoSQL skeemat kasvavat projektin edetessä?
+### Miten skeeman muutoksia ja kasvua mitataan tutkimuksissa? (Taulujen lukumäärällä ja skeema-LoC proxy mittarilla)
 ```
-What is the Growth in Complexity of the NoSQL Schema?
-
 In empirical studies on relational schema evolution, the number of tables is
 considered a simple approximation for schema complexity [9]. Accordingly, we
 track the number of entity-classes over time in Fig. 3 (based on a visualization
@@ -654,7 +649,10 @@ The second line denotes a “proxy metric” [9] for the size of the NoSQL
 schema, where we count the lines of code of entity-classes (including superclasses,
 excluding comments and empty lines), and thereby compute the Schema-LoC .10
 There is shrinkage, yet overall, schema complexity increases.
+```
 
+### Lähes aina skeema kasvaa, mutta refactoring aiheuttaa pieniä kuoppia kasvussa. 
+```
 Results. 1) As in the study by Qiu et al. on relational software evolution [14], we
 can conﬁrm that while the projects diﬀer in their life-spans and commit activity, 
 in nearly all projects, the NoSQL schema grows over time. However, there
@@ -664,15 +662,18 @@ paring to the number of entity-classes. As Schema-LoC depends on the number
 of attributes in an entity-class, we can retrace an eﬀect reported in [14], namely
 that entity-classes and their attributes (corresponding to tables and columns)
 have largely analogous dynamics. 3) In general, the schema grows more than
-it shrinks. This is in line with studies on relational schema evolution. 4) One
-observation in [14] was that the schema stabilizes early: There, for 7 out of 10
+it shrinks. This is in line with studies on relational schema evolution. 
+```
+
+### Tämä tutkimus keskittyy NoSQL ja tutkimuksen tuloksena todetaan, että NoSQL skeemaevoluutio jatkuu tasaisempana ja pidempään kuin perinteiset tietokannat, joiden muutokset painottuvat projektin alkuvaiheeseen.
+```
+One observation in [14] was that the schema stabilizes early: There, for 7 out of 10
 projects, 60% of the maximum number of tables is reached in the ﬁrst 20% of
 the commits. Interestingly, in our study, the number of entity-classes reaches
 the 60% in only 4 projects. 5) In [14], less than 2% of all commits contain valid
 schema changes (across all ten projects analyzed there). In our study, the share
 of commits with schema-relevant changes is between 2.8% and over 30%, with 4
 projects reaching over 20%. Clearly, we observe higher schema churn rates.
-
 ```
 
 ### p451 - Myös NoSQL skeemat muuttuvat ja suunta on pääosin kasvava
@@ -739,7 +740,7 @@ all possible schema changes in database applications to un-
 derstand what schema change types usually occur in prac-
 tice. Furthermore, we are interested in the distribution of
 schema changes w.r.t. schema change type to see whether
-some change types appear more frequently than others.****
+some change types appear more frequently than others.
 ```
 
 ### Trendikaavio taulujen/kolumnien määrän kasvusta
@@ -829,13 +830,15 @@ PUBLICATION STAGE: Final
 OPEN ACCESS: All Open Access; Gold Open Access
 SOURCE: Scopus
 
-
+### Miksi skeemaevoluutiota tapahtuu
+```
+One of such problems is a data warehouse evolution that occurs due to changes
+in business requirements or data sources or improvements of a data warehouse design.
+```
 
 ### Erilaisia tapoja ratkaista data warehouse evoluutiota, viittauksia muihin
 
 ```
-One of such problems is a data warehouse evolution that occurs due to changes
-in business requirements or data sources or improvements of a data warehouse design.
 There are in general two approaches to solving evolution problems. One approach is
 to adapt just the existing data warehouse schema (Bentayeb et al., 2008) or ETL pro-
 cesses (Wojciechowski, 2018) without keeping the history of changes and another ap-
@@ -867,7 +870,8 @@ for decision-making, or after changes in data sources.
 Evolution is handled in different ways in the studied architectures. Data mainte-
 nance is supported by ETL processes in Big Data warehousing architectures. Data lakes
 (Dobson et al., 2018; Hai et al., 2016; Zhuang et al., 2016) accumulate source data in
-its’ original format. Virtual integration architectures (ElSheikh et al., 2013; Yuan et al.,
+its’ original format. 
+Virtual integration architectures (ElSheikh et al., 2013; Yuan et al.,
 2010) do not store copies of source data, therefore, maintenance problem is solved nat-
 urally. Polystores (Wang et al., 2017), λ-architectures (Nadal et al., 2017) and other
 architecture types (Alsubaiee et al., 2014) apply specific operations, such as union, in-
@@ -935,10 +939,83 @@ ture, content, and data quality. Only then would the data
 in data lakes become actionable.
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -----
 ## Synchronization of Queries and Views Upon Schema Evolutions: A Survey. 
 Loredana Caruccio, Giuseppe Polese, and Genoveffa Tortora. 2016. Synchronization of Queries and Views Upon Schema Evolutions: A Survey. ACM Trans. Database Syst. 41, 2, Article 9 (June 2016), 41 pages. https://doi-org.ezproxy.uef.fi:2443/10.1145/2903726
 
+
+
+### Tutkimuksen tarkoitus ja syy
+```
+In order to an-
+alyze and classify the existing approaches in a uniform and inclusive way, in this
+article, we survey existing query/view synchronization approaches providing a frame-
+work to describe, classify, and systematically compare them. In particular, the survey
+aims to pursue the following goals: (1) to analyze existing query/view synchronization
+approaches; (2) to provide a comprehensive and classified list of them, useful for re-
+searchers, database designers, and database tool vendors; and (3) to help users select
+the approaches more suitable for their purposes.
+```
 
 ### Skeemaevoluution määritelmä ja tarve
 
