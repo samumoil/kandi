@@ -5,30 +5,12 @@
 
 # 1. Johdanto
 
-## Määritelmiä johdannossa
+## 1.1 Yleisiä määritelmiä johdannossa
 
 
 
 - tietokanta
 TÄSSÄ TÄYTYY SELITTÄÄ VIEWS + QUERIES!
-
-### data warehouse
-
-A data warehouse (DW) system architecture typically consists of: (1) a data source (DS) layer, (2) an extract-transform-load (ETL) layer, (3) a repository layer, that is,a DW or data lake (DL) [50], and (4) an analytical layer.  
-***[Repairing ETL Processes using Extended Relational Algebra]***
-
-**Data warehouse on vaikea rakentaa alusta alkaen, koska on vaikea hahmottaa, mitkä ovat oikeat ja todelliset bisnestarpeet.**
-The complexity of the monolithic approach for building a DW satisfying all information requirements has also been largely characterized in the literature as a stumbling stone in DW projects (e.g., see [1]).  
-***[A requirement-driven approach to the design and evolution of data warehouses]***
-
-
-Data Warehouses (DWs) are specialized databases mainly used to support business decisions. They store data collected from several operational databases and possibly from several external information sources. The development of Data Warehouses can be accomplished either by defining global views on a data source or by loading data from different data sources onto a reconciled database by means of ETL (Extraction, Transformation, and Loading) procedures. Moreover, DWs are based on a multidimensional data model, in which data represent facts associated to numerical measures that can be analyzed along several dimensions [Pedersen and Jensen 2001]. Analyses on Data Warehouses are mainly performed by means of OLAP (OnLine Analytical Processing) queries and Data Mining techniques.  
-***[Synchronization of Queries and Views Upon Schema Evolutions: A Survey]***
-
-
-
-
-
 
 
 
@@ -37,6 +19,18 @@ Data Warehouses (DWs) are specialized databases mainly used to support business 
 
 The ETL layer runs the so-called extract-transform-load (ETL) processes that perform manipulations on data [1]. ETL processes typically perform the following tasks: (1) extract data from DSs, which often use different models, (2) transform data into a common model, (3) clean data by removing missing, inconsistent, and redundant records, and (4) integrate and load data into a final storage, which is a DW.  
 ***[Repairing ETL Processes using Extended Relational Algebra]***
+
+### data warehouse
+
+Data Warehouses (DWs) are specialized databases mainly used to support business decisions. They store data collected from several operational databases and possibly from several external information sources. The development of Data Warehouses can be accomplished either by defining global views on a data source or by loading data from different data sources onto a reconciled database by means of ETL (Extraction, Transformation, and Loading) procedures. Moreover, DWs are based on a multidimensional data model, in which data represent facts associated to numerical measures that can be analyzed along several dimensions [Pedersen and Jensen 2001]. Analyses on Data Warehouses are mainly performed by means of OLAP (OnLine Analytical Processing) queries and Data Mining techniques.  
+***[Synchronization of Queries and Views Upon Schema Evolutions: A Survey]***
+
+A data warehouse (DW) system architecture typically consists of: (1) a data source (DS) layer, (2) an extract-transform-load (ETL) layer, (3) a repository layer, that is,a DW or data lake (DL) [50], and (4) an analytical layer.  
+***[Repairing ETL Processes using Extended Relational Algebra]***
+
+**Data warehouse on vaikea rakentaa alusta alkaen, koska on vaikea hahmottaa, mitkä ovat oikeat ja todelliset bisnestarpeet.**
+The complexity of the monolithic approach for building a DW satisfying all information requirements has also been largely characterized in the literature as a stumbling stone in DW projects (e.g., see [1]).  
+***[A requirement-driven approach to the design and evolution of data warehouses]***
 
 
 
@@ -69,17 +63,9 @@ Compared to traditional data, the features of big data **can be characterized by
 ***[Significance and challenges of big data research]***
 
 
+## 1.2 Skeemaevoluution määritelmä
 
 
-
-
-
-**Tutkimuskysymykset**
-1. Mitä skeemaevoluutiossa muuttuu?
-2. Kuinka usein skeemaevoluutiota tapahtuu?
-3. Miten skeemaevoluutiota voi hallita?
-
-# 2. Skeemaevoluution kuvailu
 
 
 
@@ -89,11 +75,9 @@ A successful DW/BI system will evolve and grow. If anything, you should constant
 ***[The data warehouse lifecycle toolkit (2nd ed.)]***
 
 
-
 **Skeemaevoluution syy on muutokset bisnesvaatimuksissa, muutokset tietolähteissä tai parannukset data warehouse toteutuksessa/designissa.**
 One of such problems is a data warehouse evolution that occurs due to changes in business requirements or data sources or improvements of a data warehouse design.  
 ***[Handling evolution in big data architectures]***
-
 
 
 **Skeemaevoluution määritelmä ja tarve**  
@@ -101,13 +85,66 @@ During the life cycle of an information system, it is often necessary to modify 
 ***[Synchronization of Queries and Views Upon Schema Evolutions: A Survey]***
 
 
+
+**Skeema-muutoksen vaikutuksia todellisessa elämässä.**  
+Both practitioners and researchers are well aware that schema modifications can: (i) dramatically impact both data and queries [8], endangering the data integrity, (ii) require expensive application maintenance for queries, and (iii) cause unacceptable system downtimes.  
+***[Graceful database schema evolution: the PRISM workbench]***
+
+**NoSQL/data lake skeemaevoluution alaisena myös**  
+With the advent of NoSQL stores, automating the schema evolution of such stores is also attracting great interest [4], [5], [6], [7]. To provide flexibility, most NoSQL systems do not require developers to specify a schema declaration, but they are schema-on-read: no checking against a schema is performed when data is stored. The “schemaless” term is commonly used to refer to this characteristic of NoSQL stores. However, not having to declare a schema does not imply the absence of one. Instead, it is implicit in data and code, but not specified explicitly. Data is always stored according to the structure of a schema that can be formally declared, or live implicit in code and data, with developers having to write code that manipulates data by having in mind that schema. Therefore, schema changes also occur for NoSQL stores, and data and code co-evolution is required.  
+***[A Generic Schema Evolution Approach for NoSQL and Relational Databases]***
+
+**Miksi muutoksia tapahtuu? Näkökulma tietotarpeita ja analyysitarpeita. Koskien data warehouse.**  
+Complex business plans and dynamic, evolving enterprise environments often result in a continuous flow of new information requirements that may further require new analytical perspectives or new data to be analyzed. Due to the dynamic nature of the DW ecosystem, building the complete DW design at once is not practical. Also, assuming that all information and business requirements are available from the beginning and remain intact is not realistic either. At the same time, for constructing a DW design (i.e., its MD schema) the heterogeneity and relations among existing data sources need to be considered as well.  
+***[A requirement-driven approach to the design and evolution of data warehouses]***
+
+
+**Miksi Big Data on erityisen altis muuttumaan?**  
+Data maintenance must be provided by the architecture, since Big Data are dynamic and up-to-date data from data sources are necessary for the analysis. Data required for the analysis are often semi-structured or even unstructured, it is important to dicover changes in such data and to handle them properly. New data sources may become available and necessary to support new or more valuable analysis capabilities provided by the Big Data analysis system. If Big Data available for the analysis are structured into a schema (integrated target or global schema), evolution of such schema (denoted as schema evolution in Table 2) may occur because of changes in information requirements of the system, for example, when additional data may become necessary for decision-making, or after changes in data sources.  
+***[Handling evolution in big data architectures]***
+
+
+**Avoimen lähdekoodin web-asiat ovat erityisen alttiita muutoksille**  
+The problem is particularly serious in Web Information Systems, such as Wikipedia [33], where significant downtimes are not acceptable while a mounting pressure for schema evolution follows from the diverse and complex requirements of its open-source, collaborative software-development environment [8].  
+***[Graceful database schema evolution: the PRISM workbench]***
+
+**Taas yksi maininta käyttäjä/bisnesvaatimusten muutoksen aiheuttamasta evoluutiopaineesta. Lisäksi kommenttia siitä, että perinteistä tietokantaa voi taitava DBA päivittää itse, mutta NoSQL tyypisessä toteutuksessa monimutkaisuus on paljon suurempaa.**  
+As user requirements change, the data structures evolve, and, consequently, also the respective storage strategy, queries, etc. This problem is challenging even in the world of single-model databases. In simpler applications, we can rely on a skilled database administrator, but in more complex situations it is a difficult and error-prone task requiring correct and complete propagation of a change to all affected parts of the system. In addition, we can observe contradictory approaches to this problem in different types of DBMSs.  
+***[Evolution management in multi-model databases]***
+
+**Data warehouse ja Data lake on pakko muuttua kun data source muuttaa skeemaansa. Eli tässä mainitaan se, miten olemassa olevaa dataintegraationkerrosta joudutaan muuttamaan skeemaevoluution vuoksi.**  
+An almost unexplored area for both DW and DL architectures is the management of structural changes in data sources at the integration layer (i.e., the ETL/DPW/DPP). In practice, data sources change their structures (i.e., schemas) frequently [12], [13]. Typically, after such changes, a pre-designed and already deployed integration processes cannot be executed and must be repaired. 
+***[Still Open Problems in Data Warehouse and Data Lake Research]***
+
+
+
+**Skeemaevoluution yleinen kuvaus ja kommentti asian automaattisen hoitamisen tarvoitteesta**  
+Schema evolution is a classical problem in database research. Database schemas have to be modified during the lifetime of databases due to situations such as the appearance of new functional or non-functional requirements, or database refactoring. When this happens, stored data and code of database applications must be updated to conform to the new schema, as illustrated in Fig. 1. The desirable goal is to automate the co-evolution of data and code for schema changes in order to save effort and to avoid data and application errors. 
+***[A Generic Schema Evolution Approach for NoSQL and Relational Databases]***
+
+**Kuvausta muutosten yleisyydestä. Perustelu asian tärkeydelle.**  
+A study of the schema evolution of 195 free open source software projects [51, 52, 54] with similar schema evolution profiles revealed that only 17% of these projects had not experienced database schema changes.  
+***[Repairing ETL Processes using Extended Relational Algebra]***
+
+
+## 1.3 Tutkimuskysymykset
+
+1. Mitä skeemaevoluutiossa muuttuu/tapahtuu?
+2. Kuinka usein skeemaevoluutiota tapahtuu ja kuinka laajasti?
+3. Miten skeemaevoluutiota voi hallita?
+
+
+
+
+
+# 2. Mitä skeemaevoluutio ihan tarkalleen ottaen on ja mitä siinä muuttuu?
+
+
+
+
 **Skeemaevoluutio on skeemaversioinnin alaotsikko**  
 Schema evolution can be considered a special case of schema versioning, where only the current version of a schema is maintained. In fact, in schema evolution, the goal is to ensure the possibility to perform schema modifications without losing existing data and preserving the semantics of queries/views, which is much more a reduced goal with respect to schema versioning, where the aim is to preserve the semantics of queries/views on any schema version.  
 ***[Synchronization of Queries and Views Upon Schema Evolutions: A Survey]***
-
-
-
-
 
 
 **Vieläkään(!) ei ole ratkaisua ongelmaan**  
@@ -115,35 +152,9 @@ However, from the analysis made in this work, we can affirm that there is still 
 ***[Synchronization of Queries and Views Upon Schema Evolutions: A Survey]***
 
 
-
-
-
-
-**Skeema-muutoksen vaikutuksia todellisessa elämässä.**  
-Both practitioners and researchers are well aware that schema modifications can: (i) dramatically impact both data and queries [8], endangering the data integrity, (ii) require ex- pensive application maintenance for queries, and (iii) cause unacceptable system downtimes.  
-***[Graceful database schema evolution: the PRISM workbench]***
-
-
-
-**Avoimen lähdekoodin web-asiat ovat erityisen alttiita muutoksille**  
-The problem is particularly serious in Web Information Systems, such as Wikipedia [33], where significant downtimes are not acceptable while a mounting pressure for schema evolution follows from the diverse and complex requirements of its open-source, collaborative software-development environment [8].  
-***[Graceful database schema evolution: the PRISM workbench]***
-
-
-
-**Skeemaevoluution yleinen kuvaus ja kommentteja sen ratkaisuista**  
-Schema evolution is a classical problem in database research. Database schemas have to be modified during the lifetime of databases due to situations such as the appearance of new functional or non-functional requirements, or database refactoring. When this happens, stored data and code of database applications must be updated to conform to the new schema, as illustrated in Fig. 1. The desirable goal is to automate the co-evolution of data and code for schema changes in order to save effort and to avoid data and application errors. For relational databases, such automation has formally been addressed in several works that contributed with languages and tools, among which PRISM++ [1] and DB-Main [2] are remarkable. More recently, sophisticated commercial tools are available to support relational schema evolution when agile development is applied by using continuous integration and deployment (CI/DC) [3], for example, Liquibase1 and Flyway.  
+**Kommentteja siitä millaisia ratkaisia tilanteeseen on jo kehitetty.**  
+For relational databases, such automation has formally been addressed in several works that contributed with languages and tools, among which PRISM++ [1] and DB-Main [2] are remarkable. More recently, sophisticated commercial tools are available to support relational schema evolution when agile development is applied by using continuous integration and deployment (CI/DC) [3], for example, Liquibase1 and Flyway.  
 ***[A Generic Schema Evolution Approach for NoSQL and Relational Databases]***
-
-**Taas yksi maininta käyttäjä/bisnesvaatimusten muutoksen aiheuttamasta evoluutiopaineesta. Lisäksi kommenttia siitä, että perinteistä tietokantaa voi taitava DBA päivittää itse, mutta NoSQL tyypisessä toteutuksessa monimutkaisuus on paljon suurempaa.**  
-As user requirements change, the data structures evolve, and, consequently, also the respective storage strategy, queries, etc. This problem is challenging even in the world of single-model databases. In simpler applications, we can rely on a skilled database administrator, but in more complex situations it is a difficult and error-prone task requiring correct and complete propagation of a change to all affected parts of the system. In addition, we can observe contradictory approaches to this problem in different types of DBMSs.  
-***[Evolution management in multi-model databases]***
-
-
-
-
-
-
 
 
 **Skeemaevoluutiossa erityisesti views+queries täytyy synkronisoida**  
@@ -157,17 +168,7 @@ Since the evolution of a source data schema might corrupt the mappings between t
 
 
 
-
-**NoSQL/data lake skeemaevoluution alaisena myös**  
-With the advent of NoSQL stores, automating the schema evolution of such stores is also attracting great interest [4], [5], [6], [7]. To provide flexibility, most NoSQL systems do not require developers to specify a schema declaration, but they are schema-on-read: no checking against a schema is performed when data is stored. The “schemaless” term is commonly used to refer to this characteristic of NoSQL stores. However, not having to declare a schema does not imply the absence of one. Instead, it is implicit in data and code, but not specified explicitly. Data is always stored according to the structure of a schema that can be formally declared, or live implicit in code and data, with developers having to write code that manipulates data by having in mind that schema. Therefore, schema changes also occur for NoSQL stores, and data and code co-evolution is required.  
-***[A Generic Schema Evolution Approach for NoSQL and Relational Databases]***
-
-**Miksi muutoksia tapahtuu? Näkökulma tietotarpeita ja analyysitarpeita. Koskien data warehouse.**  
-Complex business plans and dynamic, evolving enterprise environments often result in a continuous flow of new information requirements that may further require new analytical perspectives or new data to be analyzed. Due to the dynamic nature of the DW ecosystem, building the complete DW design at once is not practical. Also, assuming that all information and business requirements are available from the beginning and remain intact is not realistic either. At the same time, for constructing a DW design (i.e., its MD schema) the heterogeneity and relations among existing data sources need to be considered as well.  
-***[A requirement-driven approach to the design and evolution of data warehouses]***
-
-
-
+**Pitäisikö tämä siirtää skeemaevoluution tiheyden otsikon alle?!**
 **Miten skeeman muutoksia ja kasvua mitataan tutkimuksissa? (Taulujen lukumäärällä ja skeema-LoC proxy mittarilla)**  
 In empirical studies on relational schema evolution, the number of tables is considered a simple approximation for schema complexity [9]. Accordingly, we track the number of entity-classes over time in Fig. 3 (based on a visualization idea from [14]). For each project, one chart is shown. On the horizontal axis, we track the progress of the project, measured as the percentage of git commits analyzed. For the madcap project, this is based on 853 commits (c.f. Table 1). On the vertical axis, we track the size of the NoSQL database schema using two metrics. One is the number of entity-classes (blue solid line). This metric is also normalized w.r.t. its maximum throughout the project history. So for madcap, the 100% peak corresponds to 82 entity-classes, some of which were removed in the later phase of the project. We refer to Table 1 for the exact number of entity-classes added and removed. The second line denotes a “proxy metric” [9] for the size of the NoSQL schema, where we count the lines of code of entity-classes (including superclasses, excluding comments and empty lines), and thereby compute the Schema-LoC. There is shrinkage, yet overall, schema complexity increases.  
 ***[An Empirical Study on the Design and Evolution of NoSQL Database Schemas]***
@@ -176,9 +177,6 @@ In empirical studies on relational schema evolution, the number of tables is con
 
 **Mitä muutoksia ja kuinka yleisiä kukin muutostyyppi on?**  
 The rest of the projects had experienced changes ranging from a few intra-table attribute modifications (33%) to significant schema changes (11%). Other studies [55, 56] showed that the most frequent changes in DS schemas include: (1) creating or dropping a table, (2) creating or dropping an attribute of a table, and (3) changing the definition of an attribute.  
-...  
-**Tämä seuraava on myös suoraan omana lähteenään, harkitse poistamista:**
-In the analysis of schema changes presented in [18], tables were classified in increasing order of complexity as: isolated (not involved in foreign keys), source (with outgoing foreign keys only), lookup (with incoming foreign keys only), and internal (with both kinds). The study revealed that less complex tables are more likely to have a life with few or zero schema updates, whereas more complex tables are more likely to undergo high numbers of updates. Early versions of the analyzed database includes the births of complex tables, as opposed to the simple ones, demonstrating a pattern of reducing the creation of complex, heavily updated tables in the schema as time progresses.  
 ***[Repairing ETL Processes using Extended Relational Algebra]***
 
 
@@ -215,28 +213,7 @@ Kuvasta nähdään hyvin, miten skeemaevoluutio aiheuttaa tarpeen muuttaa myös 
 ![kuva_taulusta](./src/table_schema_evolution_and_related.png)
 
 
-
-
-**Operaatiopohjainen skeemaevoluution määritelmä**  
-Tämä näkökulma tarkastelee skeemaevoluutiota sen perustella, millä komennoilla skeemaa muutetaan.
-
-Operation based includes approaches based on the editing process, that is, approaches that define schema modification commands to implement each type of supported changes. More specifically, the operation-based approaches define several modification operations to specify the effects of single modifications on both schemas and instances (see Banerjee et al. [1987], Zicari [1991], Roddick et al. [1993], Peters and Özsu [1997], and Moro et al. [2007]). Such approaches enable the management of both simple and composed schema modifications.
-
-As an example, by using the schema modification operators defined in the SMO language [Curino et al. 2008b], an operation-based specification of the schema evolution S →S of Figure 1 is
-
-DROP COLUMN positioning FROM ATMPoint.  
-***[Synchronization of Queries and Views Upon Schema Evolutions: A Survey]***
-
-
-**Mapping based skeemaevoluution määritelmä**  
-Tämä näkökulma tarkastelee skeemaevoluutiota sen perusteella, mitä yhteisiä ominaisuuksia ja eroja alkuperäisellä ja lopullisella skeemalla on. Ominaisuudet "mäpätään".
-
-Mapping based includes approaches based on the editing result, that is, approaches that allow one to modify the schemas as necessary and then compare the two schema versions [Lerner 2000]. Thus, they mainly focus on the detection of correspondences between schema versions, which can be represented by means of mappings [Bertino 1992; Lakshmanan et al. 1993; Lerner 2000; Bernstein et al. 2000; Bernstein and Rahm 2000; Melnik 2004; Bernstein 2003; Bernstein and Melnik 2007; Velegrakis et al. 2004a].  
-***[Synchronization of Queries and Views Upon Schema Evolutions: A Survey]***
-
-
-
-
+***ALLA OLEVA TEKSTI KUVAA SITÄ, MISSÄ TAULUISSA TAPAHTUU MUUTOKSIA JA MITÄ TAULUJA LISÄTÄÄN. LISÄKSI SIINÄ VÄHÄN KOMMENTOIDAAN SITÄ, MILLOIN EM. MUUTOKSIA TAPAHTUU.***
 
 **!!! Minkälaiset taulut muuttuvat useimmiten? (Pitäisikö tämä olla skeemaevoluution tiheyden otsikon alla?)**
 
@@ -246,20 +223,17 @@ A Topological Hierarchy and Its Evolutionary Behavior. After observing that di�
 
 Complexity Hierarchy : Isolated → Source −→ Lookup → Internal
 
-We have discovered that the complexity spectrum that results from this hierarchy relates to the behavior of tables. On the high end of the complexity spectrum, the internal tables demonstrate quite a diﬀerent life than the isolated tables at the other end of it. Complex internal tables demonstrate high activity –which means the undergo attribute additions, deletions and type updates – whereas isolated tables undergo very little if zero change. Remember that we are studying data sets with hundreds of commits spanning into several years of monitoring. At the very same time, internal tables are almost totally born at the earliest version of the database history: in other words, there are no internal, topologically complex, and, probably active, tables born after the initiation of the database. The phenomenon is quite opposite for isolated tables: despite the fact that a fair percentage of them is present in the original version of the database, isolated tables are the most likely to be added in subsequent versions.  
+We have discovered that the complexity spectrum that results from this hierarchy relates to the behavior of tables. On the high end of the complexity spectrum, the internal tables demonstrate quite a diﬀerent life than the isolated tables at the other end of it. Complex internal tables demonstrate high activity – which means they undergo attribute additions, deletions and type updates – whereas isolated tables undergo very little if zero change. Remember that we are studying data sets with hundreds of commits spanning into several years of monitoring. At the very same time, internal tables are almost totally born at the earliest version of the database history: in other words, there are no internal, topologically complex, and, probably active, tables born after the initiation of the database. The phenomenon is quite opposite for isolated tables: despite the fact that a fair percentage of them is present in the original version of the database, isolated tables are the most likely to be added in subsequent versions.  
 ***[!!!!! A study on the effect of a table’s involvement in foreign keys to its schema evolution]***
 
 **!!! Miksi em. löydös toteutuu?**  
-Why is this Happening? As also noted in the past [8,12], the main force that seems to govern schema evolution, at least in the Free Open Source Software (FOSS) setting that we study, is gravitation to rigidity, due to the diﬃculty of altering the schema of a database when surrounding code is built upon it. The same seems to be observed here too: (a) inactive, topologically simple tables are much more populous and easy to create than complex and active ones; (b) very few tables change topological category (Fig. 4), with most changes in the ephemeral or short-lasting categories of label-changes; (c) diﬀerent topological categories seem to have diﬀerent evolutionary behaviors – speciﬁcally, most of the activity of the high-end of the complexity spectrum is due to the addition of attributes to the existing structures, quite diﬀerently from the lower end of the spectrum, where administrators are more inclined towards building new tables.  
+Why is this Happening? As also noted in the past [8,12], the main force that seems to govern schema evolution, at least in the Free Open Source Software (FOSS) setting that we study, is gravitation to rigidity, due to the diﬃculty of altering the schema of a database when surrounding code is built upon it. The same seems to be observed here too: (a) inactive, topologically simple tables are much more populous and easy to create than complex and active ones; (b) very few tables change topological category (Fig. 4), with most changes in the ephemeral or short-lasting categories of label-changes; (c) diﬀerent topological categories seem to have diﬀerent evolutionary behaviors – specifically, most of the activity of the high-end of the complexity spectrum is due to the addition of attributes to the existing structures, quite diﬀerently from the lower end of the spectrum, where administrators are more inclined towards building new tables.  
 ***[!!!!! A study on the effect of a table’s involvement in foreign keys to its schema evolution]***
 
 
-
-**Miksi Big Data on erityisen altis muuttumaan?**  
-Data maintenance must be provided by the architecture, since Big Data are dynamic and up-to-date data from data sources are necessary for the analysis. Data required for the analysis are often semi-structured or even unstructured, it is important to dicover changes in such data and to handle them properly. New data sources may become available and necessary to support new or more valuable analysis capabilities provided by the Big Data analysis system. If Big Data available for the analysis are structured into a schema (integrated target or global schema), evolution of such schema (denoted as schema evolution in Table 2) may occur because of changes in information requirements of the system, for example, when additional data may become necessary for decision-making, or after changes in data sources.  
-***[Handling evolution in big data architectures]***
-
-
+**Perinteisessä relaatiotietokannassa muutoksia tapahtuu usein kenttien tyypeissä, mutta tämä ei ole nähtävissä NoSQL-kannoissa. Asia voi selittyä sillä, että perinteisissä relaatiokannoissa on useita erilaisia kenttätyyppejä esim tekstille vrt. NoSQL Googlen toteutuksessa, jossa vaihtoehtoja ei ole kuin kaksi. Jos vaihtoehtoja on vain vähän, on todennäköisempää valita se sopiva jo alussa, jolloin muutoksia ei tarvita.**  
+What stands out is that in relational schema evolution, type changes have been found to be among the most frequent schema changes [14,25], and we do not see this eﬀect in NoSQL schema evolution. One conjecture is that in the SQL data deﬁnition language (and its many dialects), there is a richer set of types. For instance, character data may be stored as char(n) varchar(n), nvarchar(n), or clob (a listing which is not necessarily exhaustive). In contrast, in Google Cloud Datastore, there are merely the Java types String and Text. Thus, it is plausible that we observe fewer type changes in NoSQL schemas.  
+***[An Empirical Study on the Design and Evolution of NoSQL Database Schemas]***
 
 **Tietokantaevoluutio sisältää kaksi osaa: Skeemaevoluutio, joka aiheuttaa dataevoluution. Mainitaan tämä seikka luvun lopussa ja kommentoidaan, ettei tutkielma keskity siihen. Sama asia mainitaan myös jossain muussa lähteessä, otetaan se tähän samaan paikkaan.**  
 Database evolution consists of two steps: schema update and data evolution. Existing work on database evolution mainly studies the first step, specifically, the interfaces and operators needed for schema update and the maintenance of associated views/applications. A system for supporting automatic schema evolution, the PRISM workbench [5], provides support for predicting the effect of schema update, implementing logical independence, improving audibility, rewriting queries, etc. However, efficient algorithms for evolving the data from the original schema to the new schema is yet to be investigated. Currently, data evolution is expressed and executed at query level, i.e., via SQL queries.  
@@ -274,6 +248,9 @@ Database evolution consists of two steps: schema update and data evolution. Exis
 
 # 3. Kuinka usein ja milloin skeemaevoluutiota tapahtuu?
 
+**Epämääräinen kommentti siitä, että big data on erityisen nopea muuttumaan.**  
+(Semi-)automatic repair of integration processes turned out to be extremely difficult for traditional (mainly relational) DSs and it becomes even more difficult in a big data eco-system; firstly - because big data evolve much more frequently than traditional data sources, and secondly - because there are many more data models and formats to be handled while integrating data.  
+***[Still Open Problems in Data Warehouse and Data Lake Research]***
 
 
 **Trendikaavio taulujen/kolumnien määrän kasvusta**  
@@ -282,7 +259,7 @@ Tässä näkyy hyvin, kuinka paljon ja missä vaiheessa projektia skeemaevoluuti
 
 ![kuva taulusta](./src/trend_of_table_and_column_increase.png)
 
-**Kuinka tiheästi muutoksia tapahtuu? Vrt. yllä oleva kuva samasta tutkimuksesta.**  
+**Kuinka tiheästi muutoksia tapahtuu? Vrt. yllä oleva kuva samasta tutkimuksesta. Oiekastaan tässä kuvataan muutoksen määrää per vuosi, joka kyllä on sama kuin muutoksen tiheys.**  
 Taulukossa 4 näkyy keskiarvona: Tutkimukseen mukaan otettuja muutoksia on näissä 10 projektissa 20.5 kertaa vuodessa. Vastaavasti atomisia muutoksia on 90.0 kappaletta vuodessa.
 
 Alla GR = growth rate
@@ -298,10 +275,7 @@ Results
 ***[An empirical analysis of the co-evolution of schema and code in database applications]***
 
 
-
-**Kuvausta muutosten yleisyydestä ja laajuudesta.**  
-A study of the schema evolution of 195 free open source software projects [51, 52, 54] with similar schema evolution profiles revealed that only 17% of these projects had not experienced database schema changes.  
-...  
+**MediaWiki muutosten määrä 4 vuoden ja 7 kuukauden aikana oli 171 skeemaversiota.** 
 Finally, MediaWiki, originally developed to run Wikipedia, had 171 different database schema versions in 4 years and 7 months of its life [16].  
 ***[Repairing ETL Processes using Extended Relational Algebra]***
 
@@ -309,15 +283,9 @@ Finally, MediaWiki, originally developed to run Wikipedia, had 171 different dat
 
 **Tämä tutkimus keskittyy NoSQL ja tutkimuksen tuloksena todetaan, että NoSQL skeemaevoluutio jatkuu tasaisempana ja pidempään kuin perinteiset tietokannat, joiden muutokset painottuvat projektin alkuvaiheeseen.**  
 One observation in [14] was that the schema stabilizes early: There, for 7 out of 10 projects, 60% of the maximum number of tables is reached in the ﬁrst 20% of the commits. Interestingly, in our study, the number of entity-classes reaches the 60% in only 4 projects. 5) In [14], less than 2% of all commits contain valid schema changes (across all ten projects analyzed there). In our study, the share of commits with schema-relevant changes is between 2.8% and over 30%, with 4 projects reaching over 20%. Clearly, we observe higher schema churn rates.  
+...  
+Still, we do suspect that NoSQL developers evolve their schema more continuously. One indicator supporting this hypothesis is that a larger share of the commits contains code changes that aﬀect the schema.  
 ***[An Empirical Study on the Design and Evolution of NoSQL Database Schemas]***
-
-
-
-**Perinteisessä relaatiotietokannassa muutoksia tapahtuu usein kenttien tyypeissä, mutta tämä ei ole nähtävissä NoSQL-kannoissa. Asia voi selittyä sillä, että perinteisissä relaatiokannoissa on useita erilaisia kenttätyyppejä esim tekstille vrt. NoSQL Googlen toteutuksessa, jossa vaihtoehtoja ei ole kuin kaksi. Jos vaihtoehtoja on vain vähän, on todennäköisempää valita se sopiva jo alussa, jolloin muutoksia ei tarvita.**  
-Still, we do suspect that NoSQL developers evolve their schema more continuously. One indicator supporting this hypothesis is that a larger share of the commits contains code changes that aﬀect the schema. What stands out is that in relational schema evolution, type changes have been found to be among the most frequent schema changes [14,25], and we do not see this eﬀect in NoSQL schema evolution. One conjecture is that in the SQL data deﬁnition language (and its many dialects), there is a richer set of types. For instance, character data may be stored as char(n) varchar(n), nvarchar(n), or clob (a listing which is not necessarily exhaustive). In contrast, in Google Cloud Datastore, there are merely the Java types String and Text. Thus, it is plausible that we observe fewer type changes in NoSQL schemas.  
-***[An Empirical Study on the Design and Evolution of NoSQL Database Schemas]***
-
-
 
 
 
@@ -325,40 +293,27 @@ Still, we do suspect that NoSQL developers evolve their schema more continuously
 
 # 4. Skeemaevoluution hallinta
 
-**Kimball Lifecycle on yksi tapa hoitaa muutosta? Miksi mikään muu lähde ei mainitse tätä, kun kirja on kuitenkin julkaistu 2008?**  
-The Kimball Lifecycle approach is designed to help the data warehouse respond gracefully to change. Before you think about growth opportunities, you should assess your current environment.  
-***[The data warehouse lifecycle toolkit (2nd ed.)]***
 
-
-**Yksi luonnollinen ja jo käytössä oleva tapa hallita skeemaevoluutiota on luoda ja muokata pieniä ja yksinkertaisia tauluja skeeman "laidoilla". Näyttäisi siltä, että kehittäjät ovat itsenäisesti "löytäneet" yhden tehokkaan tavan hallita skeemaevoluution haittavaikutuksia: Mieluiten luodaan uusia pieniä tauluja tai muutetaan vanhojen taulujen attribuutteja.**  
-We conjecture that an explanation for this diﬀerence in behavior is the avoid-to-break-the-code principle: adding new information via new tables, which can later be removed if not useful, does not result in the necessity to update the surrounding code that queries and updates the existing tables. This leads to maintenance-by-addition and simpliﬁes the life of developers, at the expense, of course, of increasing the size of the schema and fragmenting the information into many tables. So, developers augment the database with simple topologies, and if complex topologies need expansion, this is done via attribute injection. A second reason that we conjecture aﬀects the evolutionary proﬁle of tables, is the deployment of projects. Remember we are studying FOSS projects, built to be selected by other organizations. Once a FOSS project has been adopted and deployed by an organization, future upgrades might result in the change of the schema too. Upgrading the schema in the presence of existing data is a painful experience, and simple structures and maintenance-by-addition reduce this pain.  
-***[!!!!! A study on the effect of a table’s involvement in foreign keys to its schema evolution]***
-
-
-**ETL prosessin tuntemus apuna kehityksessä, MYÖS DATA QUALITY MANAGEMENT ja error event schema**  
-The ETL system described in Chapters 9 and 10 and constructed for your first deliverable should be a strong foundation for future development. It's common for second phase projects to have more complex ETL than the initial project. But as an offset, now your ETL developers have tool expertise, and have built the techniques and infrastructure for running the ETL system in your environment. The design we described for data quality tracking is intended to be expanded incrementally. Once the error event schema is in place, then data quality screens can be added one at a time indefinitely. A data quality team should constantly be improving quality by proposing and implementing new and better screens.  
-***[The data warehouse lifecycle toolkit (2nd ed.)]***
-
-
-**Perinteisen ja NoSQL tietovarastojen ero skeemaevoluution yhteydessä: NoSQL tietovarasto voi hyödyntää laiskaa propagaatiota, kun perinteisesti muutokset täytyy toteuttaa heti evoluution yhteydessä.**  
-In the world of traditional relational or XML databases, schema evolution requires immediate changes to both the schema and the data instance (eager propagation). With NoSQL systems, we can (to some extent) exploit the support for redundancy and schemalessness, i.e., the ability to store data with similar, but not necessarily the same structure, and propagate the changes when needed (lazy propagation).
-***[Evolution management in multi-model databases]***
+## 4.1 Hallinnan tarve, yleiskuvaus ja erilaiset tarkastelutavat
 
 
 
-**Vieläkään ei ole kaupallisia tai avoimia työkaluja, jotka olisivat ratkaisseet tämän evoluution hallinnan ongelman.**  
-An almost unexplored area for both DW and DL architectures is the management of structural changes in data sources at the integration layer (i.e., the ETL/DPW/DPP). In practice, data sources change their structures (i.e., schemas) frequently [12], [13]. Typically, after such changes, a pre-designed and already deployed integration processes cannot be executed and must be repaired. So far, such a repair is done manually by an ETL designer, as neither commercial nor open source integration tools support (semi-)automatic repairs of such processes. Few solutions to this problem have been proposed so far, e.g., [14]–[17], but they still require substantial work from an ETL designer and they are applicable to simple DS changes and simple data processing workflows only. (Semi-)automatic repair of integration processes turned out to be extremely difficult for traditional (mainly relational) DSs and it becomes even more difficult in a big data eco-system; firstly - because big data evolve much more frequently than traditional data sources, and secondly - because there are many more data models and formats to be handled while integrating data.  
-***[Still Open Problems in Data Warehouse and Data Lake Research]***
-
-
-
-**Data lineage tool auttaa hälyttämään muutoksista ja näyttämään, mihin muutokset vaikuttavat.**  
-A data lineage [2] tool allows a user to monitor where data is coming from, where data is being transported to, and what transformations are applied to data as it flows through an ETL process. Some organisations rely on data lineage tools to trace error in their data pipeline as a result of DS schema changes. A structure lineage provides means to track dependencies between data objects in a DW/DL system, i.e., between a DS schema, ETL objects, and a DW schema. Even though data lineage and structure lineage tools show which part of an ETL process was impacted by a DS change, they do not provide means for automatic or at least semi-automatic reparation of affected ETL processes. As a consequence, such repairs have to be done manually.  
-***[Repairing ETL Processes using Extended Relational Algebra]***
 
 **Kuvaus automaattisen muutoksenhalinnan tarpeesta. Ei ole vielä kunnollisia välineitä, mikä on hieman kummallista, koska tämä tekstin on vuodelta 2025 ja muissa teksteissä mainitaan useitakin erilaisia malleja. Ehkä kyse on siitä, että mallit eivät ole yleistyneet?**  
 In practice, large companies deploy dozens or even hundreds of thousands of ETL processes (e.g., in banking or pharma). Thus, a manual reparation of ETL processes is complex and costly w.r.t. time and money. Since structural changes in DSs are frequent, being able to use a solution for an automatic or semi-automatic reparation of an ETL process after DS schema changes would decrease ETL maintenance time and cost. Handling and incorporating structural changes to the ETL layer received so far little attention from the research community [3, 35, 36, 40, 46, 58]. As a consequence, none of the commercial or open-source ETL tools existing on the market supports this functionality.  
 ***[Repairing ETL Processes using Extended Relational Algebra]***
+
+
+
+**Data lineage tool auttaa hälyttämään muutoksista ja näyttämään, mihin muutokset vaikuttavat. Tämä on nykytilan kuvausta ja auttaa "manuaalisen työn" toteuttamisessa.**  
+A data lineage [2] tool allows a user to monitor where data is coming from, where data is being transported to, and what transformations are applied to data as it flows through an ETL process. Some organisations rely on data lineage tools to trace error in their data pipeline as a result of DS schema changes. A structure lineage provides means to track dependencies between data objects in a DW/DL system, i.e., between a DS schema, ETL objects, and a DW schema. Even though data lineage and structure lineage tools show which part of an ETL process was impacted by a DS change, they do not provide means for automatic or at least semi-automatic reparation of affected ETL processes. As a consequence, such repairs have to be done manually.  
+***[Repairing ETL Processes using Extended Relational Algebra]***
+
+
+**Perinteisen ja NoSQL tietovarastojen ero skeemaevoluution yhteydessä: NoSQL tietovarasto voi hyödyntää laiskaa propagaatiota, kun perinteisesti muutokset täytyy toteuttaa heti evoluution yhteydessä.**  
+In the world of traditional relational or XML databases, schema evolution requires immediate changes to both the schema and the data instance (eager propagation). With NoSQL systems, we can (to some extent) exploit the support for redundancy and schemalessness, i.e., the ability to store data with similar, but not necessarily the same structure, and propagate the changes when needed (lazy propagation).  
+***[Evolution management in multi-model databases]***
+
 
 
 **Lähtökohtaisesti skeemaevoluutioon voi suhtautua kahdella tavalla (ylätasolla): 1) Tehdään muutokset ja korvataan edellinen skeema uudella, jolloin menetetään historia ja aiemmat skeemat tai 2) Ylläpidetään myös vanhoja skeemoja tietyn aikaa, jotta näkymät ja muut tietojärjestelmät voivat käyttää niitä muutoksen ajan.**  
@@ -366,10 +321,59 @@ There are in general two approaches to solving evolution problems. One approach 
 ***[Handling evolution in big data architectures]***
 
 
-
-
 **Erilaisia tapoja selvitä skeemaevoluutiosta, laiska muutos vs versioitu muutos.**  
-Thus, the research community has focused its attention on the development of approaches capable of mitigating the inherent complexity of the synchronization process, such as (1) approaches applying updates in a lazy fashion or (2)approaches capable of tolerating the presence of queries and views working on previous versions of a database schema. Lazy update approaches have been proposed to cope with delayed synchronization processes [Ferrandina et al. 1994], whereas tolerating approaches assume that only new applications are relevant, while old ones are discarded. When old applications have to be maintained, schema versioning provides an alternative solution to the query/view synchronization problem [De Castro et al. 1997; Grandi and Mandreoli 2003; Jørgensen and Böhlen 2007; Jensen and Böhlen 2002]. The adoption of schema versioning lets old applications continue work with the old schema, whereas new applications will work with the new schema.  
+Thus, the research community has focused its attention on the development of approaches capable of mitigating the inherent complexity of the synchronization process, such as (1) approaches applying updates in a lazy fashion or (2) approaches capable of tolerating the presence of queries and views working on previous versions of a database schema. Lazy update approaches have been proposed to cope with delayed synchronization processes [Ferrandina et al. 1994], whereas tolerating approaches assume that only new applications are relevant, while old ones are discarded. When old applications have to be maintained, schema versioning provides an alternative solution to the query/view synchronization problem [De Castro et al. 1997; Grandi and Mandreoli 2003; Jørgensen and Böhlen 2007; Jensen and Böhlen 2002]. The adoption of schema versioning lets old applications continue work with the old schema, whereas new applications will work with the new schema.  
+***[Synchronization of Queries and Views Upon Schema Evolutions: A Survey]***
+
+
+
+
+## 4.2 "Manuaaliset" ja perinteiset tavat hallita skeemaevoluutiota
+
+
+
+**Vieläkään ei ole kaupallisia tai avoimia työkaluja, jotka olisivat ratkaisseet tämän evoluution hallinnan ongelman.**  
+So far, such a repair is done manually by an ETL designer, as neither commercial nor open source integration tools support (semi-)automatic repairs of such processes.  
+***[Still Open Problems in Data Warehouse and Data Lake Research]***
+
+
+
+**Kimball Lifecycle on yksi tapa hoitaa muutosta? Miksi mikään muu lähde ei mainitse tätä, kun kirja on kuitenkin julkaistu 2008?**  
+The Kimball Lifecycle approach is designed to help the data warehouse respond gracefully to change. Before you think about growth opportunities, you should assess your current environment.  
+***[The data warehouse lifecycle toolkit (2nd ed.)]***
+
+
+**Yksi luonnollinen ja jo käytössä oleva tapa hallita skeemaevoluutiota on luoda ja muokata pieniä ja yksinkertaisia tauluja skeeman "laidoilla". Näyttäisi siltä, että kehittäjät ovat itsenäisesti "löytäneet" yhden tehokkaan tavan hallita skeemaevoluution haittavaikutuksia: Mieluiten luodaan uusia pieniä tauluja tai muutetaan vanhojen taulujen attribuutteja.**  
+We conjecture that an explanation for this diﬀerence in behavior is the avoid-to-break-the-code principle: adding new information via new tables, which can later be removed if not useful, does not result in the necessity to update the surrounding code that queries and updates the existing tables. This leads to maintenance-by-addition and simpliﬁes the life of developers, at the expense, of course, of increasing the size of the schema and fragmenting the information into many tables. So, developers augment the database with simple topologies, and if complex topologies need expansion, this is done via attribute injection. 
+
+A second reason that we conjecture aﬀects the evolutionary proﬁle of tables, is the deployment of projects. Remember we are studying FOSS projects, built to be selected by other organizations. Once a FOSS project has been adopted and deployed by an organization, future upgrades might result in the change of the schema too. Upgrading the schema in the presence of existing data is a painful experience, and simple structures and maintenance-by-addition reduce this pain.  
+***[!!!!! A study on the effect of a table’s involvement in foreign keys to its schema evolution]***
+
+
+
+## 4.3 (Semi-)automaattiset mallit skeemaevoluution hallintaan
+
+
+**On olemassa malleja, mutta ne ovat silti yhä työläitä. Myös kommentti big datan erityisen nopeasta skeemaevoluutiosta ja muutoksesta.**  
+Few solutions to this problem have been proposed so far, e.g., [14]–[17], but they still require substantial work from an ETL designer and they are applicable to simple DS changes and simple data processing workflows only. (Semi-)automatic repair of integration processes turned out to be extremely difficult for traditional (mainly relational) DSs and it becomes even more difficult in a big data eco-system; firstly - because big data evolve much more frequently than traditional data sources, and secondly - because there are many more data models and formats to be handled while integrating data.  
+***[Still Open Problems in Data Warehouse and Data Lake Research]***
+
+
+**Operaatiopohjainen skeemaevoluution määritelmä**  
+Tämä näkökulma muutoksen hallintaan tarkastelee skeemaevoluutiota sen perustella, millä komennoilla skeemaa muutetaan.
+
+Operation based includes approaches based on the editing process, that is, approaches that define schema modification commands to implement each type of supported changes. More specifically, the operation-based approaches define several modification operations to specify the effects of single modifications on both schemas and instances (see Banerjee et al. [1987], Zicari [1991], Roddick et al. [1993], Peters and Özsu [1997], and Moro et al. [2007]). Such approaches enable the management of both simple and composed schema modifications.
+
+As an example, by using the schema modification operators defined in the SMO language [Curino et al. 2008b], an operation-based specification of the schema evolution S →S of Figure 1 is
+
+DROP COLUMN positioning FROM ATMPoint.  
+***[Synchronization of Queries and Views Upon Schema Evolutions: A Survey]***
+
+
+**Mapping based skeemaevoluution määritelmä**  
+Tämä näkökulma muutoksen hallintaan tarkastelee skeemaevoluutiota sen perusteella, mitä yhteisiä ominaisuuksia ja eroja alkuperäisellä ja lopullisella skeemalla on. Ominaisuudet "mäpätään".
+
+Mapping based includes approaches based on the editing result, that is, approaches that allow one to modify the schemas as necessary and then compare the two schema versions [Lerner 2000]. Thus, they mainly focus on the detection of correspondences between schema versions, which can be represented by means of mappings [Bertino 1992; Lakshmanan et al. 1993; Lerner 2000; Bernstein et al. 2000; Bernstein and Rahm 2000; Melnik 2004; Bernstein 2003; Bernstein and Melnik 2007; Velegrakis et al. 2004a].  
 ***[Synchronization of Queries and Views Upon Schema Evolutions: A Survey]***
 
 
@@ -455,8 +459,6 @@ The semantic issues of the approach can be summarized as follows:
 
 
 
-
-
 **PRISM**  
 PRISM is one of the tools designed in the context of the macro project Pantha Rei, which includes several research projects concerning schema evolutions and related data management problems [Curino et al. 2008]. In particular, the approach underlying PRISM aims at reducing the gap between ideal solutions to schema evolution and the real world [Curino et al. 2008a, 2008b, 2008c; Moon et al. 2008; Curino et al. 2009, 2010, 2013]. To this end, the authors provide several guidelines on what a system should offer to adequately support schema evolution and related problems. PRISM has been developed based on such guidelines, and it assists a DBA in the design of the schema evolution, guaranteeing the automatic processing of related queries. It accomplishes this task by devoting particular attention to information preservation, redundancy control, and reversibility.
 
@@ -489,13 +491,6 @@ The semantic issues of the approach can be summarized as follows:
 
 
 
-
-
-
-
-
-
-
 **Yksi ratkaisumalli NoSQL skeemaevoluutioon**  
 In this paper, we have explored the NoSQL schema evolution by offering a generic solution: a unified data model with which we defined a taxonomy of schema changes. We presented the Orion schema operation language implementing this taxonomy. Thanks to the richness of the unified metamodel abstractions, we were able to define changes that affect aggregates, references, and variations. The operations have been implemented for three widely used NoSQL stores, one based in documents and schemaless, other column-based that requires schema declarations, and a third one based in graphs. The usefulness of our proposal has been validated through a refactoring of the StackOverflow dataset and an outlier migration on the Reddit dataset. This work also presents an application of the unified metamodel presented by Fernández Candel et al. [9]. An implementation of Athena and Orion are publicly available on a GitHub repository.  
 ***[A Generic Schema Evolution Approach for NoSQL and Relational Databases]***
@@ -508,8 +503,6 @@ In this work, we present a semi-automatic method for Ontology-based data warehou
 
 
 
-
-
 **SMO ja miten PRISM toimii lyhyesti**  
 PRISM exploits the concept of Schema Modification Operators (SMO) [4], representing atomic schema changes, which we then modify and enhance by (i) introducing the use of functions for data type and semantic conversions, (ii) providing a mapping to Disjunctive Embedded Dependencies (DEDs), (iii) obtain invertibility results compatible to [13], and (iv) define the translation into efficient SQL primitives to perform the data migration.  
 ***[Graceful database schema evolution: the PRISM workbench]***
@@ -518,8 +511,6 @@ PRISM exploits the concept of Schema Modification Operators (SMO) [4], represent
 **PRISM tarkempi kuvaus, yksi ratkaisu skeemaevoluution hallintaan**  
 We presented PRISM, a tool that supports the time- consuming and error-prone activity of Schema Evolution. The system provides the DBA with a concise operational language to represent schema change and increases predictability of the evolution being designed by automatically verifying information preservation, redundancy and query support. The SMO-based representation of the schema evolution is used to derive logical mappings between schema versions. Legacy queries are thus supported by means of query rewriting or automatically generated SQL views. The system provides interfaces with commercial relational DBMSs to implement the actual data migration and to deploy views and rewritten queries. As a by-product, the schema evolution history is recorded. This represents an invaluable piece of information for the purposes of documentation, database flash back, and DBA education. Continuous validation against challenging real-life evolution histories, such as the one of Wikipedia, proved invaluable in molding PRISM into a system that builds on the theoretical foundations laid by recent research and provides a practical solution to the difficult problems of schema evolution.  
 ***[Graceful database schema evolution: the PRISM workbench]***
-
-
 
 
 
@@ -568,7 +559,24 @@ In order to analyze and classify the existing approaches in a uniform and inclus
 
 # 6. Pohdinta
 
+
+
+**Jostain syystä tätä ei mainittu missään lähteessä erikseen: Errer event seuranta ja virheiden logitus on tärkeä osa skeemaevoluution seurantaa. Ja toisaalta virhelogituksesta voidaan myös havaita skeeman muuttuneen.**  
+The ETL system described in Chapters 9 and 10 and constructed for your first deliverable should be a strong foundation for future development. It's common for second phase projects to have more complex ETL than the initial project. But as an offset, now your ETL developers have tool expertise, and have built the techniques and infrastructure for running the ETL system in your environment. The design we described for data quality tracking is intended to be expanded incrementally. Once the error event schema is in place, then data quality screens can be added one at a time indefinitely. A data quality team should constantly be improving quality by proposing and implementing new and better screens.  
+***[The data warehouse lifecycle toolkit (2nd ed.)]***
+
+
+
+
+
+
 # Lähteet
+
+
+
+
+
+
 
 
 
